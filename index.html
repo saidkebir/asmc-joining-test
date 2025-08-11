@@ -3,444 +3,1429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympiade Algérienne de Mathématiques 2025</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Archive officiel de l'Olympiade Algérienne de Mathématiques 2025 - Épreuve de sélection pour le stage d'été. Consultez les sujets, corrigés et participants.">
+    <meta name="keywords" content="olympiade mathématiques algérie, ASMC 2025, olympiad mathematics algeria, stage été, sélection mathématiques">
+    <meta name="author" content="Said Kebir">
+    <meta property="og:title" content="Olympiade Algérienne de Mathématiques 2025 - Archive">
+    <meta property="og:description" content="Archive de l'épreuve de sélection ASMC 2025 pour le stage d'été. Sujets, corrigés et liste des participants.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Olympiade Algérienne de Mathématiques 2025">
+    <meta name="twitter:description" content="Archive de l'épreuve de sélection ASMC 2025 pour le stage d'été">
+    
+    <title>Olympiade Algérienne de Mathématiques 2025 - Archive</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Cairo', 'Inter', sans-serif;
-            background-color: #050a1a;
-            color: #e0e0e0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #e2e8f0;
+            line-height: 1.7;
         }
+        
         .hero-bg {
-            background-image: linear-gradient(rgba(5, 10, 26, 0.9), rgba(5, 10, 26, 1)), url('https://placehold.co/1920x1080/0a192f/e0e0e0?text=Math+Patterns');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 50%, rgba(51, 65, 85, 0.95) 100%);
+            position: relative;
         }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        
         .section-title {
             font-family: 'Cairo', sans-serif;
             font-weight: 900;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        .card {
-            background-color: rgba(17, 24, 39, 0.5);
-            border: 1px solid rgba(55, 65, 81, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
+        
         .btn-primary {
-            background-color: #4f46e5;
-            transition: background-color 0.3s ease;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
         }
+        
         .btn-primary:hover {
-            background-color: #4338ca;
+            background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.4);
         }
+        
         .btn-secondary {
-            background-color: #374151;
-            transition: background-color 0.3s ease;
+            background: rgba(51, 65, 85, 0.8);
+            border: 1px solid rgba(71, 85, 105, 0.5);
         }
+        
         .btn-secondary:hover {
-            background-color: #4b5563;
+            background: rgba(71, 85, 105, 0.9);
+            border-color: rgba(99, 102, 241, 0.5);
         }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
         .timeline-item::before {
             content: '';
             position: absolute;
-            top: 20px;
-            width: 40px;
-            height: 40px;
+            left: 0;
+            top: 1rem;
+            width: 1rem;
+            height: 1rem;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
             border-radius: 50%;
-            background-color: #1f2937;
-            border: 4px solid #4f46e5;
-            z-index: 1;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
         }
-        html[dir="rtl"] .timeline-item::before { right: -21px; }
-        html[dir="ltr"] .timeline-item::before { left: -21px; }
-
+        
         .timeline-line {
             position: absolute;
-            top: 20px;
-            bottom: 0;
-            width: 4px;
-            background-color: #374151;
+            left: 0.5rem;
+            top: 2rem;
+            bottom: -2rem;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(99, 102, 241, 0.5) 0%, rgba(139, 92, 246, 0.5) 100%);
         }
-        html[dir="rtl"] .timeline-line { right: -3px; }
-        html[dir="ltr"] .timeline-line { left: -3px; }
-
+        
+        .participant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        
+        .participant-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .participant-card:hover {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-1px);
+        }
+        
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        #lang-switcher .lang-option {
-            display: none;
+        .accordion-open {
+            max-height: 2000px;
         }
-        #lang-switcher:hover .lang-option {
-            display: block;
+        
+        .rotating-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        
+        .stats-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        [lang="ar"] {
+            font-family: 'Tajawal', sans-serif;
         }
     </style>
 </head>
-<body class="antialiased">
 
+<body class="antialiased">
     <!-- Header -->
-    <header class="p-4 md:p-6 sticky top-0 z-50 card">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-bold text-white">
-                <span class="text-indigo-400">ASMC</span> 2025
-            </h1>
-            <nav class="hidden md:flex items-center gap-6">
-                <a href="#about" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_about">À propos</a>
-                <a href="#schedule" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_schedule">Calendrier</a>
-                <a href="#rules" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_rules">Règles</a>
-                <a href="#participants" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_participants">Participants</a>
-                <a href="#results" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_results">Résultats</a>
-                <a href="#team" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_team">L'équipe</a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <a href="https://discord.gg/pxfe6VZ9du" target="_blank" class="btn-secondary text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
-                    <svg fill="white" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.533 3.227a2.2 2.2 0 0 0-1.867-.96h-.003a14.226 14.226 0 0 0-3.53.663 12.34 12.34 0 0 0-2.56 1.543 12.52 12.52 0 0 0-3.146 0A12.34 12.34 0 0 0 7.87 2.93a14.226 14.226 0 0 0-3.53-.663 2.2 2.2 0 0 0-1.87.96c-.533.8-.667 1.867-.4 2.8.667 2.4 1.867 4.667 3.467 6.533a12.04 12.04 0 0 0-2.4 1.467 1.6 1.6 0 0 0-.667 1.2 1.733 1.733 0 0 0 .667 1.466C5.2 18.133 7.267 19.6 9.6 20.533a13.214 13.214 0 0 0 2.4.667c.267 0 .533 0 .8-.067a13.12 13.12 0 0 0 2.4-.667c2.333-.933 4.4-2.4 5.733-3.866a1.733 1.733 0 0 0 .667-1.467 1.6 1.6 0 0 0-.667-1.2 12.04 12.04 0 0 0-2.4-1.467c1.6-1.866 2.8-4.133 3.467-6.533.266-.933.133-2-.4-2.8ZM9.733 15.2c-1.2 0-2.133-1.067-2.133-2.4 0-1.333.933-2.4 2.133-2.4s2.133 1.067 2.133 2.4c0 1.333-.933 2.4-2.133 2.4Zm4.534 0c-1.2 0-2.133-1.067-2.133-2.4 0-1.333.933-2.4 2.133-2.4s2.133 1.067 2.133 2.4c0 1.333-.933 2.4-2.133 2.4Z"/></svg>
-                    <span>Discord</span>
-                </a>
-                <!-- Language Switcher -->
-                <div id="lang-switcher" class="relative">
-                    <button class="btn-secondary text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
-                        <i data-lucide="globe"></i>
-                        <span id="current-lang">FR</span>
-                    </button>
-                    <div class="absolute top-full right-0 mt-2 w-full card rounded-lg overflow-hidden">
-                        <button onclick="setLanguage('fr')" class="lang-option w-full text-left px-4 py-2 hover:bg-gray-700">Français</button>
-                        <button onclick="setLanguage('en')" class="lang-option w-full text-left px-4 py-2 hover:bg-gray-700">English</button>
-                        <button onclick="setLanguage('ar')" class="lang-option w-full text-left px-4 py-2 hover:bg-gray-700">العربية</button>
+    <header class="sticky top-0 z-50 card border-b border-slate-700">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div>
+                        <h1 class="text-xl font-bold text-white" data-translate="asmc_title">ASMC 2025</h1>
+                        <p class="text-xs text-gray-400" data-translate="asmc_subtitle">Algerian Summer Math Camp</p>
                     </div>
+                </div>
+                
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" data-translate="nav_about">À propos</a>
+                    <a href="#timeline" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" data-translate="nav_timeline">Chronologie</a>
+                    <a href="#rules" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" data-translate="nav_rules">Règles</a>
+                    <a href="#participants" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" data-translate="nav_participants">Participants</a>
+                    <a href="#resources" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" data-translate="nav_resources">Ressources</a>
+                    <a href="#team" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300" data-translate="nav_team">Équipe</a>
+                </nav>
+                
+                <div class="flex items-center space-x-3">
+                    <button id="lang-switcher" class="btn-secondary px-4 py-2 rounded-lg flex items-center space-x-2 text-sm font-medium transition-all duration-300">
+                        <i class="fas fa-language text-indigo-400"></i>
+                        <span data-translate="lang_button">العربية</span>
+                    </button>
+                    <a href="https://discord.gg/pxfe6VZ9du" target="_blank" rel="noopener noreferrer" class="btn-secondary px-4 py-2 rounded-lg flex items-center space-x-2 text-sm font-medium transition-all duration-300">
+                        <i class="fab fa-discord text-indigo-400"></i>
+                        <span data-translate="discord_button">Discord</span>
+                    </a>
+                    <a href="mailto:kebir.said.khaled@gmail.com" class="btn-secondary px-4 py-2 rounded-lg flex items-center space-x-2 text-sm font-medium transition-all duration-300">
+                        <i class="fas fa-envelope text-indigo-400"></i>
+                        <span data-translate="contact_button">Contact</span>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <main class="hero-bg">
-        <section class="container mx-auto px-4 py-20 md:py-32 text-center">
-            <h2 class="text-4xl md:text-6xl font-black text-white leading-tight section-title" data-lang-key="hero_title">
-                Olympiade Algérienne de <span class="text-indigo-400">Mathématiques</span>
-            </h2>
-            <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300" data-lang-key="hero_subtitle">
-                L'épreuve de sélection pour le stage d'été 2025/2026. Votre premier pas vers l'excellence et les compétitions internationales.
-            </p>
-            <div class="mt-8">
-                <a href="#results" class="btn-primary text-white font-bold py-3 px-8 rounded-lg text-lg" data-lang-key="hero_button">
-                    Voir les Résultats
-                </a>
+    <section class="hero-bg py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-7xl font-black mb-6 section-title leading-tight" data-translate="hero_title">
+                    Olympiade Algérienne de Mathématiques
+                </h2>
+                <div class="text-2xl md:text-3xl font-bold text-indigo-300 mb-8" data-translate="hero_subtitle">
+                    Archive 2025
+                </div>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed" data-translate="hero_description">
+                    L'épreuve de sélection pour le stage d'été 2025/2026 s'est achevée avec succès. 
+                    Cette archive contient tous les documents, participants et résultats de cette édition historique.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#resources" class="btn-primary text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300">
+                        <i class="fas fa-file-pdf mr-2"></i>
+                        <span data-translate="hero_button_subjects">Consulter les Sujets</span>
+                    </a>
+                    <a href="#participants" class="btn-secondary text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300">
+                        <i class="fas fa-users mr-2"></i>
+                        <span data-translate="hero_button_participants">Voir les Participants</span>
+                    </a>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <div class="container mx-auto px-4 py-16 md:py-24 space-y-24">
-
+    <div class="container mx-auto px-6 py-16 space-y-24">
         <!-- About Section -->
-        <section id="about">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="about_title">Qui a participé ?</h3>
-                <p class="mt-2 text-gray-400 max-w-2xl mx-auto" data-lang-key="about_subtitle">L'examen était ouvert aux esprits les plus brillants des cycles moyen et secondaire.</p>
+        <section id="about" class="scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl section-title mb-4" data-translate="about_title">À Propos de l'Événement</h3>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-translate="about_subtitle">
+                    Un événement d'excellence mathématique qui a rassemblé les meilleurs talents du pays
+                </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="flex justify-center mb-4"><div class="bg-indigo-500/20 p-3 rounded-full"><i data-lucide="graduation-cap" class="text-indigo-400 w-8 h-8"></i></div></div>
-                    <h4 class="text-xl font-bold text-white" data-lang-key="about_middle">Cycle Moyen</h4>
-                    <p class="text-gray-400 mt-2" data-lang-key="about_middle_desc">Élèves de 3ème année (3AM) et 4ème année (4AM).</p>
+            
+            <!-- Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div class="stats-card card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-indigo-400 mb-2">142</div>
+                    <div class="text-gray-400" data-translate="stats_total_participants">Participants Totaux</div>
                 </div>
-                <div class="card p-6 rounded-xl text-center">
-                    <div class="flex justify-center mb-4"><div class="bg-green-500/20 p-3 rounded-full"><i data-lucide="book-marked" class="text-green-400 w-8 h-8"></i></div></div>
-                    <h4 class="text-xl font-bold text-white" data-lang-key="about_high">Cycle Secondaire</h4>
-                    <p class="text-gray-400 mt-2" data-lang-key="about_high_desc">Élèves de 1ère (1AS), 2ème (2AS), et 3ème année (3AS).</p>
+                <div class="stats-card card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-purple-400 mb-2">3</div>
+                    <div class="text-gray-400" data-translate="stats_evaluation_rounds">Toures d'Évaluation</div>
                 </div>
-                <div class="card p-6 rounded-xl text-center md:col-span-2 lg:col-span-1">
-                    <div class="flex justify-center mb-4"><div class="bg-yellow-500/20 p-3 rounded-full"><i data-lucide="star" class="text-yellow-400 w-8 h-8"></i></div></div>
-                    <h4 class="text-xl font-bold text-white" data-lang-key="about_experienced">Participants Expérimentés</h4>
-                    <p class="text-gray-400 mt-2" data-lang-key="about_experienced_desc">Beaucoup avaient déjà participé au stage de juin et à l'Olympiade Nationale.</p>
+                <div class="stats-card card p-6 rounded-2xl text-center">
+                    <div class="text-3xl font-bold text-pink-400 mb-2">32</div>
+                    <div class="text-gray-400" data-translate="stats_selected_final">Sélectionnés à la fin</div>
+                </div>
+            </div>
+            
+            <!-- Context -->
+            <div class="card p-8 rounded-2xl mb-12">
+                <h4 class="text-2xl font-bold text-white mb-6 flex items-center">
+                    <i class="fas fa-info-circle feature-icon mr-3"></i>
+                    <span data-translate="context_title">Contexte et Objectifs</span>
+                </h4>
+                <div class="prose prose-lg text-gray-300 max-w-none">
+                    <p class="mb-4" data-translate="context_p1">
+                        Dans le cadre de la préparation aux compétitions internationales de mathématiques, 
+                        Nous avons organisé une série 
+                        d'examens de sélection durant le mois d'août 2025.
+                    </p>
+                    <p class="mb-4" data-translate="context_p2">
+                        L'objectif était d'identifier et de sélectionner les talents mathématiques les plus 
+                        prometteurs du pays pour participer au stage d'entraînement intensif de l'été 2025/2026, 
+                        préparatoire aux olympiades internationales.
+                    </p>
+                    <p data-translate="context_p3">
+                        La majorité des participants avaient déjà bénéficié du programme de formation de juin et 
+                        avaient participé à l'Olympiade Nationale de Mathématiques organisée au Lycée des Mathématiques 
+                        de La Coupole au début de juillet 2025.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Schedule Section -->
-        <section id="schedule">
+        <!-- Timeline Section -->
+        <section id="timeline" class="scroll-mt-20">
             <div class="text-center mb-16">
-                <h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="schedule_title">Déroulement de l'Examen</h3>
-                <p class="mt-2 text-gray-400" data-lang-key="schedule_subtitle">Un défi intellectuel réparti sur trois manches intenses.</p>
+                <h3 class="text-4xl md:text-5xl section-title mb-4" data-translate="timeline_title">Chronologie des Épreuves</h3>
+                <p class="text-xl text-gray-400" data-translate="timeline_subtitle">Trois toures intenses qui ont testé l'excellence mathématique</p>
             </div>
-            <div class="relative max-w-3xl mx-auto">
-                <div class="timeline-line"></div>
-                <div class="space-y-16">
-                    <div class="relative px-8 md:px-12 timeline-item">
-                        <div class="card p-6 rounded-xl"><p class="text-sm font-semibold text-indigo-400" data-lang-key="schedule_r1_date">Dimanche 3 Août 2025 (9:00 - 12:00)</p><h4 class="text-xl font-bold text-white mt-2" data-lang-key="schedule_r1_title">Première Manche</h4><p class="text-gray-400 mt-2" data-lang-key="schedule_r1_desc">Questions à choix multiples pour 142 participants. Une première épreuve pour tester les connaissances fondamentales.</p></div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-12">
+                    <div class="timeline-item">
+                        <div class="timeline-line"></div>
+                        <div class="card p-8 rounded-2xl">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-2xl font-bold text-white" data-translate="timeline_round1_title">Première Toure</h4>
+                                <div class="text-sm font-semibold text-indigo-400 bg-indigo-400/20 px-3 py-1 rounded-full" data-translate="timeline_round1_date">
+                                    3 août 2025
+                                </div>
+                            </div>
+                            <div class="text-gray-400 mb-4" data-translate="timeline_round1_time">Dimanche • 9h00 - 12h00</div>
+                            <p class="text-gray-300 mb-4" data-translate="timeline_round1_desc">
+                                Questions à choix multiples destinées à évaluer les connaissances fondamentales. 
+                                Cette première épreuve a rassemblé <strong class="text-indigo-400">142 participants</strong> 
+                                de tous les niveaux éligibles.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-400" data-translate="timeline_round1_info">
+                                <i class="fas fa-users mr-2"></i>
+                                142 participants • Format QCM
+                            </div>
+                        </div>
                     </div>
-                    <div class="relative px-8 md:px-12 timeline-item">
-                        <div class="card p-6 rounded-xl"><p class="text-sm font-semibold text-indigo-400" data-lang-key="schedule_r2_date">Mardi 5 Août 2025 (9:00 - 12:00)</p><h4 class="text-xl font-bold text-white mt-2" data-lang-key="schedule_r2_title">Deuxième Manche</h4><p class="text-gray-400 mt-2" data-lang-key="schedule_r2_desc">Une autre série de questions à choix multiples pour 135 concurrents, augmentant la complexité.</p></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-line"></div>
+                        <div class="card p-8 rounded-2xl">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-2xl font-bold text-white" data-translate="timeline_round2_title">Deuxième Toure</h4>
+                                <div class="text-sm font-semibold text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full" data-translate="timeline_round2_date">
+                                    5 août 2025
+                                </div>
+                            </div>
+                            <div class="text-gray-400 mb-4" data-translate="timeline_round2_time">Mardi • 9h00 - 12h00</div>
+                            <p class="text-gray-300 mb-4" data-translate="timeline_round2_desc">
+                                Nouvelle série de questions à choix multiples avec une complexité accrue. 
+                                <strong class="text-purple-400">135 participants</strong> ont relevé le défi 
+                                de cette deuxième étape de sélection.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-400" data-translate="timeline_round2_info">
+                                <i class="fas fa-users mr-2"></i>
+                                135 participants • Complexité élevée
+                            </div>
+                        </div>
                     </div>
-                    <div class="relative px-8 md:px-12 timeline-item">
-                        <div class="card p-6 rounded-xl"><p class="text-sm font-semibold text-indigo-400" data-lang-key="schedule_r3_date">Jeudi 7 Août 2025 (9:00 - 12:00)</p><h4 class="text-xl font-bold text-white mt-2" data-lang-key="schedule_r3_title">Troisième Manche</h4><p class="text-gray-400 mt-2" data-lang-key="schedule_r3_desc">L'épreuve finale pour les 57 meilleurs participants. Rédaction de preuves complètes pour démontrer la maîtrise et la rigueur mathématique.</p></div>
+                    
+                    <div class="timeline-item">
+                        <div class="card p-8 rounded-2xl">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-2xl font-bold text-white" data-translate="timeline_round3_title">Troisième Toure - Finale</h4>
+                                <div class="text-sm font-semibold text-pink-400 bg-pink-400/20 px-3 py-1 rounded-full" data-translate="timeline_round3_date">
+                                    7 août 2025
+                                </div>
+                            </div>
+                            <div class="text-gray-400 mb-4" data-translate="timeline_round3_time">Jeudi • 9h00 - 13h00</div>
+                            <p class="text-gray-300 mb-4" data-translate="timeline_round3_desc">
+                                L'épreuve finale réservée aux <strong class="text-pink-400">57 meilleurs participants</strong> 
+                                sélectionnés d'après les résultats des deux premières toures. 
+                                Format de démonstrations complètes pour évaluer la rigueur mathématique.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-400" data-translate="timeline_round3_info">
+                                <i class="fas fa-star mr-2"></i>
+                                57 finalistes • Démonstrations complètes
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Rules Section -->
-        <section id="rules">
-            <div class="text-center mb-12"><h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="rules_title">Règles de l'Examen</h3><p class="mt-2 text-gray-400" data-lang-key="rules_subtitle">L'intégrité et l'équité sont au cœur de notre compétition.</p></div>
+        <section id="rules" class="scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl section-title mb-4" data-translate="rules_title">Règles de l'Examen</h3>
+                <p class="text-xl text-gray-400" data-translate="rules_subtitle">L'intégrité et l'équité sont au cœur de notre compétition.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card p-8 rounded-xl"><h4 class="text-2xl font-bold text-green-400 flex items-center gap-2"><i data-lucide="check-circle" class="w-8 h-8"></i> <span data-lang-key="rules_reqs_title">Exigences</span></h4><ul class="mt-4 space-y-3 text-gray-300 list-inside"><li class="flex items-start"><i data-lucide="video" class="w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i><span data-lang-key="rules_reqs_1">Caméra et partage d'écran actifs en permanence.</span></li><li class="flex items-start"><i data-lucide="user-check" class="w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i><span data-lang-key="rules_reqs_2">Visage, mains et espace de travail clairement visibles.</span></li><li class="flex items-start"><i data-lucide="volume-x" class="w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i><span data-lang-key="rules_reqs_3">Environnement calme et bien éclairé.</span></li><li class="flex items-start"><i data-lucide="scan-line" class="w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i><span data-lang-key="rules_reqs_4">15 minutes pour numériser et envoyer les réponses après la fin.</span></li></ul></div>
-                <div class="card p-8 rounded-xl"><h4 class="text-2xl font-bold text-red-400 flex items-center gap-2"><i data-lucide="x-circle" class="w-8 h-8"></i> <span data-lang-key="rules_bans_title">Interdictions</span></h4><ul class="mt-4 space-y-3 text-gray-300 list-inside"><li class="flex items-start"><i data-lucide="calculator" class="w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i><span data-lang-key="rules_bans_1">Aucune calculatrice ou rapporteur.</span></li><li class="flex items-start"><i data-lucide="globe" class="w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i><span data-lang-key="rules_bans_2">Aucun logiciel, site web ou ressource externe.</span></li><li class="flex items-start"><i data-lucide="book-x" class="w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i><span data-lang-key="rules_bans_3">Aucun livre ou note personnelle.</span></li><li class="flex items-start"><i data-lucide="users" class="w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i><span data-lang-key="rules_bans_4">Aucune collaboration. Le travail doit être 100% individuel.</span></li></ul></div>
+                <div class="card p-8 rounded-2xl">
+                    <h4 class="text-2xl font-bold text-green-400 flex items-center gap-2">
+                        <i class="fas fa-check-circle w-8 h-8"></i>
+                        <span data-translate="rules_reqs_title">Exigences</span>
+                    </h4>
+                    <ul class="mt-4 space-y-3 text-gray-300 list-inside">
+                        <li class="flex items-start">
+                            <i class="fas fa-video w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i>
+                            <span data-translate="rules_reqs_1">Caméra et partage d'écran actifs en permanence.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user-check w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i>
+                            <span data-translate="rules_reqs_2">Visage, mains et espace de travail clairement visibles.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-volume-mute w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i>
+                            <span data-translate="rules_reqs_3">Environnement calme et bien éclairé.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-file-upload w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i>
+                            <span data-translate="rules_reqs_4">15 minutes pour numériser et envoyer les réponses après la fin.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card p-8 rounded-2xl">
+                    <h4 class="text-2xl font-bold text-red-400 flex items-center gap-2">
+                        <i class="fas fa-times-circle w-8 h-8"></i>
+                        <span data-translate="rules_bans_title">Interdictions</span>
+                    </h4>
+                    <ul class="mt-4 space-y-3 text-gray-300 list-inside">
+                        <li class="flex items-start">
+                            <i class="fas fa-calculator w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i>
+                            <span data-translate="rules_bans_1">Aucune calculatrice ou rapporteur.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i>
+                            <span data-translate="rules_bans_2">Aucun logiciel, site web ou ressource externe.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-book w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i>
+                            <span data-translate="rules_bans_3">Aucun livre ou note personnelle.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-users-slash w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i>
+                            <span data-translate="rules_bans_4">Aucune collaboration. Le travail doit être 100% individuel.</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <!-- Participants Section -->
-        <section id="participants">
-            <div class="text-center mb-12">
-                <h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="participants_title">Nos Participants</h3>
-                <p class="mt-2 text-gray-400" data-lang-key="participants_subtitle">Félicitations à tous les élèves qui ont participé aux épreuves.</p>
+        <section id="participants" class="scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl section-title mb-4" data-translate="participants_title">Nos Participants</h3>
+                <p class="text-xl text-gray-400" data-translate="participants_subtitle">
+                    Félicitations à tous les élèves qui ont participé à cette édition exceptionnelle
+                </p>
             </div>
-            <div class="max-w-6xl mx-auto space-y-4 accordion-container">
-                 <div class="card rounded-lg">
-                    <button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white">
-                        <span data-lang-key="participants_r1_r2">Participants aux Manches 1 & 2</span>
-                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+            
+            <div class="space-y-8">
+                <!-- Round 1 & 2 Participants -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <button class="accordion-toggle w-full p-6 text-left flex justify-between items-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white" data-translate="participants_round12_title">Participants aux Toures 1 & 2</h4>
+                                <p class="text-gray-400" data-translate="participants_round12_subtitle">142 participants au total</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 rotating-icon"></i>
                     </button>
-                    <div class="accordion-content px-5 pb-5">
-                        <div id="participants-r1-r2-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-2 text-gray-300 pt-4">
-                            <!-- List will be populated by JS -->
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0">
+                            <div class="participant-grid">
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mael Shawaly</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Kihel</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Aya Ben Alia</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Ziad Alaoui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Zakaria Mohamed Tahar Madaoui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Youcef Hefassa</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Nadjemddine Chiaoui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Amir Mohamed Rassym Rahal</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Anfel Laouati</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Yahya Abderrahmane Bourouina</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Fairouz Benyounes</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Fadhel Hadj Djilali</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Iyed Baassou</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Fares Khelif</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Anfal Guellati</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Sofiane Bouricha</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Diaa El Hak Bezzaz</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mouadh Hamane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Alaa Errahmane Zitoune</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Aymen Aouragh</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Alaa Eddin Khelifi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Aridj Athmani</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Aya Ailane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohammed Rafik Mendas</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Oussama Ahmed Mostapha Naoui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohammed Zahreddine Badji</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Abderrahmane Ghebouli</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Haithem Djefel</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Ouassim Guettache</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Omar Badis</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Iness Baassou</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Rostom Mohamed Kamel Bouabdallah</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Yara Ammari Ammari</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Kawther Salsabil Ghaz</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Yara Louise Shawaly</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mounir Maamar Zmiri</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Malek Negli</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Yacine Lamdjadani</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Taim Allah Hamane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Amir Amaieur</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Asma Zeineb Masmoudi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Hassan Dhaian</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Meriem Telhaoui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohammed Abdelssamad Tir</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Mehdi Medjiah</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Nazim Mohamdi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Baraa Halkoum</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Wassim Ouachek</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ahmed Fouhal</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Abd Essamad Ferroudji</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Wahiba Manel Khali</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Islam Lakhdari</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Abd Rahim Mellouli</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Razine Adnani</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Fares Mokhtar Missoum</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Hadi Boudjelal</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Meriem Ouerdane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Zakarya Belkherouf</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Takoua Amani Sellaoui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Sajida Slimani</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Khadidja Djihane Ahmed Yahia</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Serine Henni</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Yacine Bessouyah</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Abdelsalam Belkacemi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Bouchra Gacioui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Aghiles Ben Si Said</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Messekher</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ala Khaled</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Nesrine Mazouz</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Layane Harnane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Achraf Bessir</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Adem Chetbi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Nouha Mazouz</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Lyna Boughareb</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ghada Meisse Ziane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ola Lazouti</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Bessedik</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Insaf Berbache</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ibrahim Guellati</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Lyna Lazizi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Anouar Abderrahmane Taleb</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Rouya Boumendjel</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ines Messadia</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Halla Meriem Mahiouz</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Abdellah Issam Kerfah</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Zakaria Boulbene</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ahmed Fouad Fateh Zouak</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Abd Raouf Belli</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Yanis Bellout</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mohamed Ayoub Bengherbia</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Amine Zeyour</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Taha Abderrahmane Guendouz</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mehdi Hadjout</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ritadje Belkhiri</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ayoub Trad</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Walid Elahacene</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Abderahmene Bennadji</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Amira Hana Ouanes</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Manar Bourouila</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Ahmed Guerrout</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Khadidja Brainis</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Maram Raghad Telhaoui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Malak Fridi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Farhat Belli</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Asmaa Sekhri</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Nihad Atlaoui</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mahdi Ghomari</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Massinissa Cheurfa</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Imen Kardi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Khaoula Hammal</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Dania Bensifi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Khouloud Khaira Bentayeb</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Nada Boularak</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Hibat Errahmane Heddadi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Aroua Arine Ziane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Farah Halitim</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Koussai Adem Chebani</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Mama Douaa Benarbia</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Amel Gliz</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Inas Amrane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Nour El Houda Boudaif</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Douaa Bousmaha</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Soumia Zouaghi</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Zakaria Moulebbat</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Rimas Louisa Harnane</div>
+                                <div class="participant-card"><i class="fas fa-user-circle text-indigo-400 mr-2"></i>Taim Allah Ferroudji</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                 <div class="card rounded-lg">
-                    <button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white">
-                        <span data-lang-key="participants_r3">Participants à la Manche 3</span>
-                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
-                    </button>
-                    <div class="accordion-content px-5 pb-5 pt-4">
-                        <h4 class="text-lg font-bold text-indigo-300 mb-3" data-lang-key="participants_r3_senior">Catégorie Senior</h4>
-                        <div id="participants-r3-senior-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-2 text-gray-300 mb-6">
-                            <!-- Senior list will be populated by JS -->
+                
+                <!-- Round 3 Finalists -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <button class="accordion-toggle w-full p-6 text-left flex justify-between items-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-red-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white" data-translate="participants_round3_title">Finalistes - Toure 3</h4>
+                                <p class="text-gray-400" data-translate="participants_round3_subtitle">57 participants sélectionnés</p>
+                            </div>
                         </div>
-                        <h4 class="text-lg font-bold text-indigo-300 mb-3" data-lang-key="participants_r3_junior">Catégorie Junior</h4>
-                        <div id="participants-r3-junior-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-2 text-gray-300">
-                            <!-- Junior list will be populated by JS -->
+                        <i class="fas fa-chevron-down text-gray-400 rotating-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0">
+                            <!-- Senior Category -->
+                            <div class="mb-8">
+                                <h5 class="text-lg font-bold text-yellow-400 mb-4 flex items-center">
+                                    <i class="fas fa-trophy mr-2"></i>
+                                    <span data-translate="participants_senior_title">Catégorie Senior - 34 participants</span>
+                                </h5>
+                                <div class="participant-grid">
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Mohamed Ikbal Tebib
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Iyed Baassou
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Asma Zeineb Masmoudi
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Hassan Dhaian
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Aridj Athmani
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Mounir Maamar Zmiri
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Mahmoud Bouabdallah
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Nadjemddine Chiaoui
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Zakaria Mohamed Tahar Madaoui
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Aya Ben Alia
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Youcef Hefassa
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Chouaib Khebabza
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Abd Errahmane Si Ahmed
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Yahya Abderrahmane Bourouina
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Malek Negli
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Badji Mohamed Zahreddine
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Mohamed Ouassim Guettache
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Mohamed Alaa Eddin Khelifi
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Sofiane Bouricha
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Fairouz Benyounes
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Taim Allah Hamane
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Amir Amaieur
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Rostom Mohamed Kamel Bouabdallah
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Abderrahmane Ghebouli
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Kawther Salsabil Ghaz
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Fadhel Hadj Djilali
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Anfel Laouati
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Alaa Errahmane Zitoune
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Haithem Djefel
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Layane Harnane
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Alaa Yahia
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Meriem Ouerdane
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Kian Abolghasemi
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                                        <i class="fas fa-star text-yellow-400 mr-2"></i>Yara Saida Ammari
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Junior Category -->
+                            <div>
+                                <h5 class="text-lg font-bold text-green-400 mb-4 flex items-center">
+                                    <i class="fas fa-award mr-2"></i>
+                                    <span data-translate="participants_junior_title">Catégorie Junior - 23 participants</span>
+                                </h5>
+                                <div class="participant-grid">
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Iness Baassou
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Yacine Lamdjadani
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Amir Mohamed Rassym Rahal
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Meriem Telhaoui
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Sajida Slimani
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Mohamed Kihel
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Aya Ailane
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Mohamed Ziad Alaoui
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Anfal Guellati
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Takoua Amani Sellaoui
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Diaa El Hak Bezzaz
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Nazim Mohamdi
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Mohammed Rafik Mendas
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Abdessamad Ferroudji
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Mael Shawaly
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Mohamed Mehdi Medjiah
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Fares Khelif
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Hadi Boudjelal
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Razine Adnani
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Omar Badis
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Yara Louise Shawaly
+                                    </div>
+                                    <div class="participant-card bg-gradient-to-r from-green-500/10 to-blue-500/10 border-green-500/30">
+                                        <i class="fas fa-star text-green-400 mr-2"></i>Aymen Aouragh
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Results & Resources Section -->
-        <section id="results">
-            <div class="text-center mb-12"><h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="results_title">Sujets et Corrigés</h3><p class="mt-2 text-gray-400" data-lang-key="results_subtitle">Explorez les problèmes qui ont mis au défi nos participants.</p></div>
-            <div class="space-y-10">
-                <div class="card p-6 rounded-xl"><h4 class="text-2xl font-bold text-white mb-4" data-lang-key="results_r1">Première Manche</h4><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"><a href="https://drive.google.com/file/d/1-ZM-pAZB4MeM2iC5nVzf0j4jeW6N7ADp/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_ar">Sujet (Arabe)</span></a><a href="https://drive.google.com/file/d/1JmgGXindz0L1Cnc7wxEPmvqDXwp21i7O/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_fr">Sujet (Français)</span></a><a href="https://drive.google.com/file/d/1SB5RS7uQFZk1kPIJfMV_KN1X-3gAy08z/view?usp=drive_link" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2 transition-colors"><i data-lucide="check-check"></i><span data-lang-key="results_solutions">Corrigé</span></a></div></div>
-                <div class="card p-6 rounded-xl"><h4 class="text-2xl font-bold text-white mb-4" data-lang-key="results_r2">Deuxième Manche</h4><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"><a href="https://drive.google.com/file/d/17Jed-1wR50_TESczTnVLOdcJDOWGU288/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_ar">Sujet (Arabe)</span></a><a href="https://drive.google.com/file/d/14qab4ojhAJz3Wo6P0Azhz3nlbLghZXNS/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_fr">Sujet (Français)</span></a><a href="https://drive.google.com/file/d/1B8RgHXC6k2RzLUYySmrHkv1c66ZnT1AJ/view?usp=drive_link" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2 transition-colors"><i data-lucide="check-check"></i><span data-lang-key="results_solutions">Corrigé</span></a></div></div>
-                <div class="card p-6 rounded-xl"><h4 class="text-2xl font-bold text-white mb-4" data-lang-key="results_r3">Troisième Manche</h4><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="card p-4 rounded-lg"><h5 class="font-bold text-lg text-indigo-300 mb-3" data-lang-key="results_junior">Catégorie Junior</h5><div class="flex flex-col space-y-3"><a href="https://drive.google.com/file/d/1kNhdGvVjpL80KfLuE-vPcQTiz536QzC-/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_ar">Sujet (Arabe)</span></a><a href="https://drive.google.com/file/d/17V_cqn6HoFIw_1e66LslBSQbYJ-qPQ6n/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_fr">Sujet (Français)</span></a></div></div><div class="card p-4 rounded-lg"><h5 class="font-bold text-lg text-indigo-300 mb-3" data-lang-key="results_senior">Catégorie Senior</h5><div class="flex flex-col space-y-3"><a href="https://drive.google.com/file/d/1xjLTKJ2xcP2cc8zD5p5pqiwd7mtsPf2t/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_ar">Sujet (Arabe)</span></a><a href="https://drive.google.com/file/d/1o9o7aLonuFvtmTOcx8Jn883T0eJH1hFL/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_fr">Sujet (Français)</span></a></div></div></div></div>
+        <!-- Resources Section -->
+        <section id="resources" class="scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl section-title mb-4" data-translate="resources_title">Sujets et Corrigés</h3>
+                <p class="text-xl text-gray-400" data-translate="resources_subtitle">
+                    Tous les documents officiels de l'épreuve de sélection ASMC 2025
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Round 1 Resources -->
+                <div class="card p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-file-alt text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-white" data-translate="resources_round1_title">Première Toure</h4>
+                            <p class="text-gray-400" data-translate="resources_round1_subtitle">3 août 2025 • Questions à choix multiples</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <a href="https://drive.google.com/file/d/1-ZM-pAZB4MeM2iC5nVzf0j4jeW6N7ADp/view?usp=drive_link" 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="btn-secondary px-6 py-3 rounded-xl text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-language text-indigo-400"></i>
+                            <span data-translate="resources_subject_arabic">Sujet (العربية)</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1JmgGXindz0L1Cnc7wxEPmvqDXwp21i7O/view?usp=drive_link" 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="btn-secondary px-6 py-3 rounded-xl text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-language text-indigo-400"></i>
+                            <span data-translate="resources_subject_french">Sujet (Français)</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1SB5RS7uQFZk1kPIJfMV_KN1X-3gAy08z/view?usp=drive_link" 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="btn-primary px-6 py-3 rounded-xl text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-check-double text-white"></i>
+                            <span data-translate="resources_correction">Corrigé</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Round 2 Resources -->
+                <div class="card p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-file-alt text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-white" data-translate="resources_round2_title">Deuxième Toure</h4>
+                            <p class="text-gray-400" data-translate="resources_round2_subtitle">5 août 2025 • Questions à choix multiples</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <a href="https://drive.google.com/file/d/17Jed-1wR50_TESczTnVLOdcJDOWGU288/view?usp=drive_link" 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="btn-secondary px-6 py-3 rounded-xl text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-language text-purple-400"></i>
+                            <span data-translate="resources_subject_arabic">Sujet (العربية)</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/14qab4ojhAJz3nlbLghZXNS/view?usp=drive_link" 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="btn-secondary px-6 py-3 rounded-xl text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-language text-purple-400"></i>
+                            <span data-translate="resources_subject_french">Sujet (Français)</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1B8RgHXC6k2RzLUYySmrHkv1c66ZnT1AJ/view?usp=drive_link" 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="btn-primary px-6 py-3 rounded-xl text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                            <i class="fas fa-check-double text-white"></i>
+                            <span data-translate="resources_correction">Corrigé</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Round 3 Resources -->
+                <div class="card p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-star text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-white" data-translate="resources_round3_title">Troisième Toure - Finale</h4>
+                            <p class="text-gray-400" data-translate="resources_round3_subtitle">7 août 2025 • Démonstrations complètes</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="card p-6 rounded-xl bg-gradient-to-br from-green-500/10 to-blue-500/10 border-green-500/30">
+                            <h5 class="text-lg font-bold text-green-400 mb-4 flex items-center">
+                                <i class="fas fa-award mr-2"></i>
+                                <span data-translate="resources_junior_category">Catégorie Junior</span>
+                            </h5>
+                            <div class="space-y-3">
+                                <a href="https://drive.google.com/file/d/1kNhdGvVjpL80KfLuE-vPcQTiz536QzC-/view?usp=drive_link" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn-secondary w-full px-4 py-3 rounded-lg text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                                    <i class="fas fa-language text-green-400"></i>
+                                    <span data-translate="resources_subject_arabic">Sujet (العربية)</span>
+                                </a>
+                                <a href="https://drive.google.com/file/d/17V_cqn6HoFIw_1e66LslBSQbYJ-qPQ6n/view?usp=drive_link" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn-secondary w-full px-4 py-3 rounded-lg text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                                    <i class="fas fa-language text-green-400"></i>
+                                    <span data-translate="resources_subject_french">Sujet (Français)</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card p-6 rounded-xl bg-gradient-to-br from-yellow-500/10 to-red-500/10 border-yellow-500/30">
+                            <h5 class="text-lg font-bold text-yellow-400 mb-4 flex items-center">
+                                <i class="fas fa-trophy mr-2"></i>
+                                <span data-translate="resources_senior_category">Catégorie Senior</span>
+                            </h5>
+                            <div class="space-y-3">
+                                <a href="https://drive.google.com/file/d/1xjLTKJ2xcP2cc8zD5p5pqiwd7mtsPf2t/view?usp=drive_link" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn-secondary w-full px-4 py-3 rounded-lg text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                                    <i class="fas fa-language text-yellow-400"></i>
+                                    <span data-translate="resources_subject_arabic">Sujet (العربية)</span>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1o9o7aLonuFvtmTOcx8Jn883T0eJH1hFL/view?usp=drive_link" 
+                                   target="_blank" rel="noopener noreferrer" 
+                                   class="btn-secondary w-full px-4 py-3 rounded-lg text-center flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300">
+                                    <i class="fas fa-language text-yellow-400"></i>
+                                    <span data-translate="resources_subject_french">Sujet (Français)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Team Section -->
-        <section id="team">
-            <div class="text-center mb-12"><h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="team_title">L'Équipe d'Organisation</h3><p class="mt-2 text-gray-400" data-lang-key="team_subtitle">Les personnes dévouées qui ont rendu cet événement possible.</p></div>
-            <div class="max-w-4xl mx-auto space-y-4 accordion-container">
-                <div class="card rounded-lg"><button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white"><span data-lang-key="team_lead">Direction & Organisation</span><i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i></button><div class="accordion-content px-5 pb-5"><p class="text-gray-300 pt-4">Said Kebir</p></div></div>
-                <div class="card rounded-lg"><button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white"><span data-lang-key="team_problems">Conception des Sujets</span><i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i></button><div class="accordion-content px-5 pb-5"><p class="text-gray-300 pt-4">Azeddine Lekkam, Benkedadra Asmae, MOHAMED ASSIL SI AHMED, Chamseddine Derreche, Abdellaoui Sidali, Taki Boussalem, Wissal MECHRI, Meghabber Mohammed Al Ghazali</p></div></div>
-                <div class="card rounded-lg"><button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white"><span data-lang-key="team_proctors">Superviseurs</span><i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i></button><div class="accordion-content px-5 pb-5"><p class="text-gray-300 pt-4">Abdellaoui Sidali, LARINOUNA SELMA, Kheira Mihoub, Loullou hind, Fady Kheloui, Amani Aridja, Bouazza Mohamed Nadir, Batoul Aggoun, Taki Boussalem, Nour malak larbi, Doha Bouali, Fatima Zahra Kihel, Wissal MECHRI, Maroua Guellati, Heddadi Sara, Daghboudj Mohamed, Ben Si Said Dihia, Nada, rayan saada, Meghabber mohammed Al Ghazali, islam cherïat, Amani Sebti, Hadil Bellili, Messai Rostome, Tolba Mouatez Billah</p></div></div>
-                <div class="card rounded-lg"><button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white"><span data-lang-key="team_latex">Équipe LaTeX</span><i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i></button><div class="accordion-content px-5 pb-5"><p class="text-gray-300 pt-4">Abdellaoui Sidali, Said Kebir, ALI BEN CHIKH</p></div></div>
+        <section id="team" class="scroll-mt-20">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl section-title mb-4" data-translate="team_title">L'Équipe d'Organisation</h3>
+                <p class="text-xl text-gray-400" data-translate="team_subtitle">
+                    Les personnes dévouées qui ont rendu cet événement exceptionnel possible
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- Leadership -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <button class="accordion-toggle w-full p-6 text-left flex justify-between items-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-crown text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white" data-translate="team_leadership_title">Direction & Organisation</h4>
+                                <p class="text-gray-400" data-translate="team_leadership_subtitle">Leadership et coordination générale</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 rotating-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0">
+                            <div class="participant-card bg-gradient-to-r from-red-500/20 to-pink-500/20 border-red-500/30">
+                                <i class="fas fa-user-tie text-red-400 mr-2"></i>
+                                <strong>Said Kebir</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Problem Writers -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <button class="accordion-toggle w-full p-6 text-left flex justify-between items-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-pen-nib text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white" data-translate="team_problems_title">Conception des Problèmes</h4>
+                                <p class="text-gray-400" data-translate="team_problems_subtitle">Création et développement des épreuves</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 rotating-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0">
+                            <div class="participant-grid">
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Azeddine Lekkam</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Benkedadra Asmae</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Mohamed Assil Si Ahmed</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Chamseddine Derreche</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Abdellaoui Sidali</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Taki Boussalem</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Wissal Mechri</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Meghabber Mohammed Al Ghazali</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Khaoula Ghouga</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proctors -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <button class="accordion-toggle w-full p-6 text-left flex justify-between items-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-eye text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white" data-translate="team_proctors_title">Équipe de Surveillance</h4>
+                                <p class="text-gray-400" data-translate="team_proctors_subtitle">Supervision et surveillance des épreuves</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 rotating-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0">
+                            <div class="participant-grid">
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Abdellaoui Sidali</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Larinouna Selma</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Kheira Mihoub</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Loullou Hind</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Fady Kheloui</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Amani Aridja</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Bouazza Mohamed Nadir</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Batoul Aggoun</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Taki Boussalem</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Nour Malak Larbi</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Doha Bouali</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Fatima Zahra Kihel</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Wissal Mechri</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Maroua Guellati</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Heddadi Sara</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Daghboudj Mohamed</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Ben Si Said Dihia</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Nada</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Rayan Saada</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Meghabber Mohammed Al Ghazali</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Islam Cheriat</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Amani Sebti</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Hadil Bellili</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Messai Rostome</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Tolba Mouatez Billah</div>
+                                <div class="participant-card"><i class="fas fa-user-shield text-green-400 mr-2"></i>Khaoula Ghouga</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- LaTeX Team -->
+                <div class="card rounded-2xl overflow-hidden">
+                    <button class="accordion-toggle w-full p-6 text-left flex justify-between items-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white" data-translate="team_latex_title">Équipe LaTeX</h4>
+                                <p class="text-gray-400" data-translate="team_latex_subtitle">Mise en forme et typographie des documents</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 rotating-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-6 pt-0">
+                            <div class="participant-grid">
+                                <div class="participant-card"><i class="fas fa-laptop-code text-purple-400 mr-2"></i>Abdellaoui Sidali</div>
+                                <div class="participant-card"><i class="fas fa-laptop-code text-purple-400 mr-2"></i>Said Kebir</div>
+                                <div class="participant-card"><i class="fas fa-laptop-code text-purple-400 mr-2"></i>Ali Ben Chikh</div>
+                                <div class="participant-card"><i class="fas fa-laptop-code text-purple-400 mr-2"></i>Khaoula Ghouga</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900/50 border-t border-gray-800">
-        <div class="container mx-auto px-4 py-8 text-center text-gray-400">
-            <p class="font-bold text-lg text-white" data-lang-key="footer_title">Rejoignez notre communauté</p>
-            <div class="flex justify-center gap-6 mt-4 mb-6">
-                <a href="https://discord.gg/pxfe6VZ9du" target="_blank" class="hover:text-indigo-400 transition-colors"><svg fill="white" width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8"><path d="M21.533 3.227a2.2 2.2 0 0 0-1.867-.96h-.003a14.226 14.226 0 0 0-3.53.663 12.34 12.34 0 0 0-2.56 1.543 12.52 12.52 0 0 0-3.146 0A12.34 12.34 0 0 0 7.87 2.93a14.226 14.226 0 0 0-3.53-.663 2.2 2.2 0 0 0-1.87.96c-.533.8-.667 1.867-.4 2.8.667 2.4 1.867 4.667 3.467 6.533a12.04 12.04 0 0 0-2.4 1.467 1.6 1.6 0 0 0-.667 1.2 1.733 1.733 0 0 0 .667 1.466C5.2 18.133 7.267 19.6 9.6 20.533a13.214 13.214 0 0 0 2.4.667c.267 0 .533 0 .8-.067a13.12 13.12 0 0 0 2.4-.667c2.333-.933 4.4-2.4 5.733-3.866a1.733 1.733 0 0 0 .667-1.467 1.6 1.6 0 0 0-.667-1.2 12.04 12.04 0 0 0-2.4-1.467c1.6-1.866 2.8-4.133 3.467-6.533.266-.933.133-2-.4-2.8ZM9.733 15.2c-1.2 0-2.133-1.067-2.133-2.4 0-1.333.933-2.4 2.133-2.4s2.133 1.067 2.133 2.4c0 1.333-.933 2.4-2.133 2.4Zm4.534 0c-1.2 0-2.133-1.067-2.133-2.4 0-1.333.933-2.4 2.133-2.4s2.133 1.067 2.133 2.4c0 1.333-.933 2.4-2.133 2.4Z"/></svg></a>
-                <a href="https://t.me/algerianmo" target="_blank" class="hover:text-indigo-400 transition-colors"><i data-lucide="send" class="w-8 h-8"></i></a>
+    <footer class="bg-slate-900/80 border-t border-slate-700 mt-24">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-4 flex items-center" data-translate="footer_about_title">
+                        ASMC 2025
+                    </h4>
+                    <p class="text-gray-400 leading-relaxed" data-translate="footer_about_desc">
+                        Archive officiel de l'Olympiade Algérienne de Mathématiques 2025. 
+                        Une étape décisive vers l'excellence mathématique internationale.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-translate="footer_links_title">Liens Rapides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-indigo-400 transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i><span data-translate="nav_about">À Propos</span></a></li>
+                        <li><a href="#timeline" class="hover:text-indigo-400 transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i><span data-translate="nav_timeline">Chronologie</span></a></li>
+                        <li><a href="#rules" class="hover:text-indigo-400 transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i><span data-translate="nav_rules">Règles</span></a></li>
+                        <li><a href="#participants" class="hover:text-indigo-400 transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i><span data-translate="nav_participants">Participants</span></a></li>
+                        <li><a href="#resources" class="hover:text-indigo-400 transition-colors"><i class="fas fa-chevron-right text-xs mr-2"></i><span data-translate="nav_resources">Ressources</span></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Community -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-translate="footer_community_title">Communauté</h4>
+                    <div class="space-y-3">
+                        <a href="https://discord.gg/pxfe6VZ9du" target="_blank" rel="noopener noreferrer" 
+                           class="flex items-center text-gray-400 hover:text-indigo-400 transition-colors">
+                            <i class="fab fa-discord text-lg mr-3"></i>
+                            <span data-translate="footer_community_discord">Rejoignez Discord</span>
+                        </a>
+                        <a href="https://t.me/algerianmo" target="_blank" rel="noopener noreferrer" 
+                           class="flex items-center text-gray-400 hover:text-indigo-400 transition-colors">
+                            <i class="fab fa-telegram text-lg mr-3"></i>
+                            <span data-translate="footer_community_telegram">Canal Telegram</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Developer -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-translate="footer_developer_title">Développeur</h4>
+                    <div class="space-y-3">
+                        <div class="text-gray-400">
+                            <i class="fas fa-user-cog text-indigo-400 mr-2"></i>
+                            <strong class="text-white">Said Kebir</strong>
+                        </div>
+                        <div class="space-y-2">
+                            <a href="https://www.linkedin.com/in/said-kebir-khaled/" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center text-gray-400 hover:text-blue-400 transition-colors">
+                                <i class="fab fa-linkedin text-lg mr-3"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="mailto:kebir.said.khaled@gmail.com" 
+                               class="flex items-center text-gray-400 hover:text-red-400 transition-colors">
+                                <i class="fas fa-envelope text-lg mr-3"></i>
+                                <span data-translate="contact_button">Contact</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p data-lang-key="footer_copy">&copy; 2025 Olympiade Algérienne de Mathématiques. Tous droits réservés.</p>
+            
+            <div class="border-t border-slate-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-center md:text-left" data-translate="footer_copyright">
+                        &copy; 2025 Olympiade Algérienne de Mathématiques. Tous droits réservés.
+                    </p>
+                    <div class="flex items-center space-x-4 text-gray-400">
+                        <span data-translate="footer_developed_with">Développé avec passion</span>
+                        <!--<i class="fas fa-heart text-red-500"></i>-->
+                        <span data-translate="footer_for_community">pour la communauté mathématique algérienne</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Data and functions that don't need the DOM can stay outside
-        lucide.createIcons();
-        
-        const participantsR1R2 = [
-            "Mael Shawaly", "Mohamed Kihel", "Aya Ben alia", "Mohamed Ziad Alaoui", "Zakraia Mohamed Tahar Madaoui", "Youcef Hefassa", "nadjemddine CHIAOUI", "Amir Mohamed Rassym Rahal", "Anfel Laouati", "Yahya Abderrahmane BOUROUINA", "Fairouz Benyounes", "fadhel hadj djilali", "Iyed Baassou", "Fares Khelif", "Anfal Guellati", "Sofiane Bouricha", "Diaa el hak Bezzaz", "Mouadh Hamane", "ALAA ERRAHMANE ZITOUNE", "Aymen Aouragh", "Mohamed Alaa eddin Khelifi", "Aridj Athmani", "Aya Ailane", "Mohammed Rafik Mendas", "Oussama Ahmed Mostapha Naoui", "MOHAMMED ZAHREDDINE BADJI", "Abderrahmane Ghebouli", "Haithem Djefel", "Mohamed Ouassim Guettache", "Omar Badis", "iness baassou", "Rostom Mohamed Kamel Bouabdallah", "Yara Ammari Ammari", "Kawther Salsabil GHAZ", "Yara Louise Shawaly", "Mounir Maamar Zmiri", "Malek Negli", "Yacine Lamdjadani", "Taim Allah Hamane", "Amir Amaieur", "Asma Zeineb Masmoudi", "Hassan Dhaian", "Meriem Telhaoui", "Mohammed Abdelssamad Tir", "Mohamed Mehdi Medjiah", "Nazim Mohamdi", "Baraa Halkoum", "Wassim Ouachek", "Ahmed Fouhal", "Abd essamad Ferroudji", "wahiba manel khali", "Mohamed Islam Lakhdari", "Abd Rahim Mellouli", "Razine Adnani", "Fares mokhtar Missoum", "hadi boudjelal", "Meriem Ouerdane", "Zakarya Belkherouf", "TAKOUA AMANI SELLAOUI", "sajida slimani", "Khadidja Djihane Ahmed Yahia", "Serine Henni", "YACINE BESSOUYAH", "Abdelsalam Belkacemi", "Bouchra Gacioui", "Aghiles Ben Si Said", "Mohamed Messekher", "Αla Khaled", "Nesrine Mazouz", "Layane Harnane", "Achraf Bessir", "Adem Chetbi", "Nouha Mazouz", "Lyna Boughareb", "Ghada Meisse Ziane", "ola lazouti", "Mohamed Bessedik", "Insaf Berbache", "Ibrahim Guellati", "lyna lazizi", "Anouar Abderrahmane Taleb", "Rouya Boumendjel", "Ines Messadia", "Halla meriem Mahiouz", "Abdellah Issam Kerfah", "Mohamed Zakaria Boulbene", "Ahmed Fouad Fateh Zouak", "Abd raouf Belli", "Yanis Bellout", "Mohamed Ayoub BenGherbia", "Amine Zeyour", "Taha Abderrahmane Guendouz", "Mehdi Hadjout", "Ritadje Belkhiri", "Ayoub Trad", "Walid Elahacene", "Abderahmene Bennadji", "Amira hana Ouanes", "Manar Bourouila", "Ahmed Guerrout", "Khadidja Brainis", "Maram Raghad Telhaoui", "Malak Fridi", "FARHAT BELLI", "asmaa sekhri", "Nihad Atlaoui", "mahdi ghomari", "Massinissa Cheurfa", "Imen Kardi", "Khaoula Hammal", "Dania Bensifi", "Khouloud khaira Bentayeb", "Nada Boularak", "Hibat Errahmane Heddadi", "Aroua arine Ziane", "Farah Halitim", "Koussai adem Chebani", "Mama Douaâ Benarbia", "Amel Gliz", "Inas Amrane", "Nour El Houda Boudaif", "Douaa Bousmaha", "Soumia Zouaghi", "Zakaria Moulebbat", "Rimas Louisa Harnane", "Taim allah Ferroudji"
-        ];
-
-        const participantsR3Senior = [
-            "Mohamed Ikbal Tebib", "Iyed Baassou", "Asma Zeineb Masmoudi", "Hassan Dhaian", "Aridj Athmani", "Mounir Maamar Zmiri", "Mahmoud Bouabdallah", "Nadjemddine CHIAOUI", "Zakaria Mohamed Tahar Madaoui", "Aya Ben alia", "youcef hefassa", "chouaib khebabza", "Abd Errahmane Si Ahmed", "Yahya Abderrahmane BOUROUINA", "Malek Negli", "BADJI MOHAMED ZAHREDDINE", "Mohamed Ouassim Guettache", "Mohamed Alaa eddin Khelifi", "Sofiane BOURICHA", "Fairouz Benyounes", "Taim Allah Hamane", "Amir Amaieur", "Rostom Mohamed Kamel Bouabdallah", "Abderrahmane Ghebouli", "KAWTHER Salsabil GHAZ", "fadhel hadj djilali", "Anfel laouati", "ALAA ERRAHMANE ZITOUNE", "Haithem Djefel", "layane harnane", "alaa yahia", "Meriem Ouerdane", "Kian Abolghasemi", "Yara Saida Ammari"
-        ];
-
-        const participantsR3Junior = [
-            "iness baassou", "Yacine Lamdjadani", "Amir Mohamed Rassym Rahal", "Meriem Telhaoui", "sajida slimani", "Mohamed Kihel", "Aya Ailane", "Mohamed Ziad Alaoui", "Anfal Guellati", "TAKOUA AMANI SELLAOUI", "Diaa el hak Bezzaz", "Nazim Mohamdi", "Mohammed Rafik Mendas", "Abdessamad Ferroudji", "Mael Shawaly", "Mohamed Mehdi Medjiah", "Fares Khelif", "Hadi Boudjelal", "Razine Adnani", "Omar Badis", "Yara Louise Shawaly", "Aymen Aouragh"
-        ];
-
         const translations = {
-            en: {
-                nav_about: "About", nav_schedule: "Schedule", nav_rules: "Rules", nav_participants: "Participants", nav_results: "Results", nav_team: "The Team",
-                hero_title: "Algerian Mathematical <span class='text-indigo-400'>Olympiad</span>",
-                hero_subtitle: "The selection test for the 2025/2026 summer camp. Your first step towards excellence and international competitions.",
-                hero_button: "Subjects and Solutions",
-                about_title: "Who Participated?", about_subtitle: "The exam was open to the brightest minds from middle and high schools.",
-                about_middle: "Middle School", about_middle_desc: "Students from 3rd (3AM) and 4th year (4AM).",
-                about_high: "High School", about_high_desc: "Students from 1st (1AS), 2nd (2AS), and 3rd year (3AS).",
-                about_experienced: "Experienced Participants", about_experienced_desc: "Many had already participated in the June training camp and the National Olympiad.",
-                schedule_title: "Exam Schedule", schedule_subtitle: "An intellectual challenge spread over three intense rounds.",
-                schedule_r1_date: "Sunday, August 3, 2025 (9:00 AM - 12:00 PM)", schedule_r1_title: "First Round", schedule_r1_desc: "Multiple-choice questions for 142 participants. A first test of fundamental knowledge.",
-                schedule_r2_date: "Tuesday, August 5, 2025 (9:00 AM - 12:00 PM)", schedule_r2_title: "Second Round", schedule_r2_desc: "Another set of multiple-choice questions for 135 competitors, increasing in complexity.",
-                schedule_r3_date: "Thursday, August 7, 2025 (9:00 AM - 12:00 PM)", schedule_r3_title: "Third Round", schedule_r3_desc: "The final test for the top 57 participants. Writing complete proofs to demonstrate mastery and mathematical rigor.",
-                rules_title: "Exam Rules", rules_subtitle: "Integrity and fairness are at the heart of our competition.",
-                rules_reqs_title: "Requirements", rules_reqs_1: "Camera and screen sharing must be active at all times.", rules_reqs_2: "Face, hands, and workspace must be clearly visible.", rules_reqs_3: "Quiet and well-lit environment.", rules_reqs_4: "15 minutes to scan and submit answers after the end.",
-                rules_bans_title: "Prohibitions", rules_bans_1: "No calculators or protractors.", rules_bans_2: "No software, websites, or external resources.", rules_bans_3: "No books or personal notes.", rules_bans_4: "No collaboration. Work must be 100% individual.",
-                participants_title: "Our Participants", participants_subtitle: "Congratulations to all the students who took part in the tests.",
-                participants_r1_r2: "Participants in Rounds 1 & 2", participants_r3: "Participants in Round 3",
-                participants_r3_senior: "Senior Category", participants_r3_junior: "Junior Category",
-                results_title: "Subjects and Solutions", results_subtitle: "Explore the problems that challenged our participants.",
-                results_r1: "First Round", results_r2: "Second Round", results_r3: "Third Round",
-                results_subject_ar: "Subject (Arabic)", results_subject_fr: "Subject (French)", results_solutions: "Solutions",
-                results_junior: "Junior Category", results_senior: "Senior Category",
-                team_title: "The Organizing Team", team_subtitle: "The dedicated people who made this event possible.",
-                team_lead: "Leadership & Organization", team_problems: "Problem Design", team_proctors: "Proctors", team_latex: "LaTeX Team",
-                footer_title: "Join our community", footer_copy: "© 2025 Algerian Mathematical Olympiad. All rights reserved."
-            },
             fr: {
-                nav_about: "À propos", nav_schedule: "Calendrier", nav_rules: "Règles", nav_participants: "Participants", nav_results: "Résultats", nav_team: "L'équipe",
-                hero_title: "Olympiade Algérienne de <span class='text-indigo-400'>Mathématiques</span>",
-                hero_subtitle: "L'épreuve de sélection pour le stage d'été 2025/2026. Votre premier pas vers l'excellence et les compétitions internationales.",
-                hero_button: "Voir les Résultats",
-                about_title: "Qui a participé ?", about_subtitle: "L'examen était ouvert aux esprits les plus brillants des cycles moyen et secondaire.",
-                about_middle: "Cycle Moyen", about_middle_desc: "Élèves de 3ème année (3AM) et 4ème année (4AM).",
-                about_high: "Cycle Secondaire", about_high_desc: "Élèves de 1ère (1AS), 2ème (2AS), et 3ème année (3AS).",
-                about_experienced: "Participants Expérimentés", about_experienced_desc: "Beaucoup avaient déjà participé au stage de juin et à l'Olympiade Nationale.",
-                schedule_title: "Déroulement de l'Examen", schedule_subtitle: "Un défi intellectuel réparti sur trois manches intenses.",
-                schedule_r1_date: "Dimanche 3 Août 2025 (9:00 - 12:00)", schedule_r1_title: "Première Manche", schedule_r1_desc: "Questions à choix multiples pour 142 participants. Une première épreuve pour tester les connaissances fondamentales.",
-                schedule_r2_date: "Mardi 5 Août 2025 (9:00 - 12:00)", schedule_r2_title: "Deuxième Manche", schedule_r2_desc: "Une autre série de questions à choix multiples pour 135 concurrents, augmentant la complexité.",
-                schedule_r3_date: "Jeudi 7 Août 2025 (9:00 - 12:00)", schedule_r3_title: "Troisième Manche", schedule_r3_desc: "L'épreuve finale pour les 57 meilleurs participants. Rédaction de preuves complètes pour démontrer la maîtrise et la rigueur mathématique.",
-                rules_title: "Règles de l'Examen", rules_subtitle: "L'intégrité et l'équité sont au cœur de notre compétition.",
-                rules_reqs_title: "Exigences", rules_reqs_1: "Caméra et partage d'écran actifs en permanence.", rules_reqs_2: "Visage, mains et espace de travail clairement visibles.", rules_reqs_3: "Environnement calme et bien éclairé.", rules_reqs_4: "15 minutes pour numériser et envoyer les réponses après la fin.",
-                rules_bans_title: "Interdictions", rules_bans_1: "Aucune calculatrice ou rapporteur.", rules_bans_2: "Aucun logiciel, site web ou ressource externe.", rules_bans_3: "Aucun livre ou note personnelle.", rules_bans_4: "Aucune collaboration. Le travail doit être 100% individuel.",
-                participants_title: "Nos Participants", participants_subtitle: "Félicitations à tous les élèves qui ont participé aux épreuves.",
-                participants_r1_r2: "Participants aux Manches 1 & 2", participants_r3: "Participants à la Manche 3",
-                participants_r3_senior: "Catégorie Senior", participants_r3_junior: "Catégorie Junior",
-                results_title: "Sujets et Corrigés", results_subtitle: "Explorez les problèmes qui ont mis au défi nos participants.",
-                results_r1: "Première Manche", results_r2: "Deuxième Manche", results_r3: "Troisième Manche",
-                results_subject_ar: "Sujet (Arabe)", results_subject_fr: "Sujet (Français)", results_solutions: "Corrigé",
-                results_junior: "Catégorie Junior", results_senior: "Catégorie Senior",
-                team_title: "L'Équipe d'Organisation", team_subtitle: "Les personnes dévouées qui ont rendu cet événement possible.",
-                team_lead: "Direction & Organisation", team_problems: "Conception des Sujets", team_proctors: "Superviseurs", team_latex: "Équipe LaTeX",
-                footer_title: "Rejoignez notre communauté", footer_copy: "© 2025 Olympiade Algérienne de Mathématiques. Tous droits réservés."
+                asmc_title: "ASMC 2025",
+                asmc_subtitle: "Algerian Summer Math Camp",
+                nav_about: "À propos",
+                nav_timeline: "Chronologie",
+                nav_rules: "Règles",
+                nav_participants: "Participants",
+                nav_resources: "Ressources",
+                nav_team: "Équipe",
+                lang_button: "العربية",
+                discord_button: "Discord",
+                contact_button: "Contact",
+                hero_title: "Olympiade Algérienne de Mathématiques",
+                hero_subtitle: "Archive 2025",
+                hero_description: "L'épreuve de sélection pour le stage d'été 2025/2026 s'est achevée avec succès. Cette archive contient tous les documents, participants et résultats de cette édition historique.",
+                hero_button_subjects: "Consulter les Sujets",
+                hero_button_participants: "Voir les Participants",
+                about_title: "À Propos de l'Événement",
+                about_subtitle: "Un événement d'excellence mathématique qui a rassemblé les meilleurs talents du pays",
+                stats_total_participants: "Participants Totaux",
+                stats_evaluation_rounds: "Toures d'Évaluation",
+                stats_selected_final: "Sélectionnés à la fin",
+                context_title: "Contexte et Objectifs",
+                context_p1: "Dans le cadre de la préparation aux compétitions internationales de mathématiques, la Commission Nationale de l'Olympiade Algérienne de Mathématiques a organisé une série d'examens de sélection durant le mois d'août 2025.",
+                context_p2: "L'objectif était d'identifier et de sélectionner les talents mathématiques les plus prometteurs du pays pour participer au stage d'entraînement intensif de l'été 2025/2026, préparatoire aux olympiades internationales.",
+                context_p3: "La majorité des participants avaient déjà bénéficié du programme de formation de juin et avaient participé à l'Olympiade Nationale de Mathématiques organisée au Lycée des Mathématiques de La Coupole au début de juillet 2025.",
+                timeline_title: "Chronologie des Épreuves",
+                timeline_subtitle: "Trois toures intenses qui ont testé l'excellence mathématique",
+                timeline_round1_title: "Première Toure",
+                timeline_round1_date: "3 août 2025",
+                timeline_round1_time: "Dimanche • 9h00 - 12h00",
+                timeline_round1_desc: "Questions à choix multiples destinées à évaluer les connaissances fondamentales. Cette première épreuve a rassemblé <strong class='text-indigo-400'>142 participants</strong> de tous les niveaux éligibles.",
+                timeline_round1_info: "<i class='fas fa-users mr-2'></i>142 participants • Format QCM",
+                timeline_round2_title: "Deuxième Toure",
+                timeline_round2_date: "5 août 2025",
+                timeline_round2_time: "Mardi • 9h00 - 12h00",
+                timeline_round2_desc: "Nouvelle série de questions à choix multiples avec une complexité accrue. <strong class='text-purple-400'>135 participants</strong> ont relevé le défi de cette deuxième étape de sélection.",
+                timeline_round2_info: "<i class='fas fa-users mr-2'></i>135 participants • Complexité élevée",
+                timeline_round3_title: "Troisième Toure - Finale",
+                timeline_round3_date: "7 août 2025",
+                timeline_round3_time: "Jeudi • 9h00 - 13h00",
+                timeline_round3_desc: "L'épreuve finale réservée aux <strong class='text-pink-400'>57 meilleurs participants</strong> sélectionnés d'après les résultats des deux premières toures. Format de démonstrations complètes pour évaluer la rigueur mathématique.",
+                timeline_round3_info: "<i class='fas fa-star mr-2'></i>57 finalistes • Démonstrations complètes",
+                rules_title: "Règles de l'Examen",
+                rules_subtitle: "L'intégrité et l'équité sont au cœur de notre compétition.",
+                rules_reqs_title: "Exigences",
+                rules_reqs_1: "Caméra et partage d'écran actifs en permanence.",
+                rules_reqs_2: "Visage, mains et espace de travail clairement visibles.",
+                rules_reqs_3: "Environnement calme et bien éclairé.",
+                rules_reqs_4: "15 minutes pour numériser et envoyer les réponses après la fin.",
+                rules_bans_title: "Interdictions",
+                rules_bans_1: "Aucune calculatrice ou rapporteur.",
+                rules_bans_2: "Aucun logiciel, site web ou ressource externe.",
+                rules_bans_3: "Aucun livre ou note personnelle.",
+                rules_bans_4: "Aucune collaboration. Le travail doit être 100% individuel.",
+                participants_title: "Nos Participants",
+                participants_subtitle: "Félicitations à tous les élèves qui ont participé à cette édition exceptionnelle",
+                participants_round12_title: "Participants aux Toures 1 & 2",
+                participants_round12_subtitle: "142 participants au total",
+                participants_round3_title: "Finalistes - Toure 3",
+                participants_round3_subtitle: "57 participants sélectionnés",
+                participants_senior_title: "Catégorie Senior - 34 participants",
+                participants_junior_title: "Catégorie Junior - 23 participants",
+                resources_title: "Sujets et Corrigés",
+                resources_subtitle: "Tous les documents officiels de l'épreuve de sélection ASMC 2025",
+                resources_round1_title: "Première Toure",
+                resources_round1_subtitle: "3 août 2025 • Questions à choix multiples",
+                resources_subject_arabic: "Sujet (العربية)",
+                resources_subject_french: "Sujet (Français)",
+                resources_correction: "Corrigé",
+                resources_round2_title: "Deuxième Toure",
+                resources_round2_subtitle: "5 août 2025 • Questions à choix multiples",
+                resources_round3_title: "Troisième Toure - Finale",
+                resources_round3_subtitle: "7 août 2025 • Démonstrations complètes",
+                resources_junior_category: "Catégorie Junior",
+                resources_senior_category: "Catégorie Senior",
+                team_title: "L'Équipe d'Organisation",
+                team_subtitle: "Les personnes dévouées qui ont rendu cet événement exceptionnel possible",
+                team_leadership_title: "Direction & Organisation",
+                team_leadership_subtitle: "Leadership et coordination générale",
+                team_problems_title: "Conception des Problèmes",
+                team_problems_subtitle: "Création et développement des épreuves",
+                team_proctors_title: "Équipe de Surveillance",
+                team_proctors_subtitle: "Supervision et surveillance des épreuves",
+                team_latex_title: "Équipe LaTeX",
+                team_latex_subtitle: "Mise en forme et typographie des documents",
+                footer_about_title: "ASMC 2025",
+                footer_about_desc: "Archive officiel de l'Olympiade Algérienne de Mathématiques 2025. Une étape décisive vers l'excellence mathématique internationale.",
+                footer_links_title: "Liens Rapides",
+                footer_community_title: "Communauté",
+                footer_community_discord: "Rejoignez Discord",
+                footer_community_telegram: "Canal Telegram",
+                footer_developer_title: "Développeur",
+                footer_copyright: "&copy; 2025 Olympiade Algérienne de Mathématiques. Tous droits réservés.",
+                footer_developed_with: "Développé avec",
+                footer_for_community: "pour la communauté mathématique algérienne",
             },
             ar: {
-                nav_about: "حول", nav_schedule: "الجدول الزمني", nav_rules: "القواعد", nav_participants: "المشاركون", nav_results: "النتائج", nav_team: "الفريق",
-                hero_title: "الأولمبياد الجزائري <span class='text-indigo-400'>للرياضيات</span>",
-                hero_subtitle: "امتحان اختيار المشاركين في التدريب الصيفي 2025/2026. خطوتك الأولى نحو التميز والمسابقات الدولية.",
-                hero_button: "المواضيع والحلول",
-                about_title: "من شارك؟", about_subtitle: "كان الامتحان مفتوحًا لألمع العقول في المرحلتين المتوسطة والثانوية.",
-                about_middle: "المستوى المتوسط", about_middle_desc: "تلاميذ السنة الثالثة (3AM) والرابعة (4AM).",
-                about_high: "المستوى الثانوي", about_high_desc: "تلاميذ السنة الأولى (1AS)، الثانية (2AS)، والثالثة (3AS).",
-                about_experienced: "مشاركون ذوو خبرة", about_experienced_desc: "شارك الكثيرون بالفعل في تدريب جوان والأولمبياد الوطني.",
-                schedule_title: "جدول الامتحان", schedule_subtitle: "تحدٍ فكري موزع على ثلاث جولات مكثفة.",
-                schedule_r1_date: "الأحد 3 أغسطس 2025 (9:00 - 12:00)", schedule_r1_title: "الجولة الأولى", schedule_r1_desc: "أسئلة متعددة الخيارات لـ 142 مشاركًا. اختبار أولي للمعارف الأساسية.",
-                schedule_r2_date: "الثلاثاء 5 أغسطس 2025 (9:00 - 12:00)", schedule_r2_title: "الجولة الثانية", schedule_r2_desc: "سلسلة أخرى من الأسئلة متعددة الخيارات لـ 135 متنافسًا، مع زيادة في التعقيد.",
-                schedule_r3_date: "الخميس 7 أغسطس 2025 (9:00 - 12:00)", schedule_r3_title: "الجولة الثالثة", schedule_r3_desc: "الاختبار النهائي لأفضل 57 مشاركًا. كتابة براهين كاملة لإثبات الإتقان والدقة الرياضية.",
-                rules_title: "قواعد الامتحان", rules_subtitle: "النزاهة والإنصاف في صميم منافستنا.",
-                rules_reqs_title: "المتطلبات", rules_reqs_1: "يجب أن تكون الكاميرا ومشاركة الشاشة نشطة طوال الوقت.", rules_reqs_2: "يجب أن يكون الوجه واليدان ومساحة العمل واضحة للعيان.", rules_reqs_3: "بيئة هادئة ومضاءة جيدًا.", rules_reqs_4: "15 دقيقة لمسح الإجابات ضوئيًا وإرسالها بعد النهاية.",
-                rules_bans_title: "الممنوعات", rules_bans_1: "لا آلات حاسبة أو منقلة.", rules_bans_2: "لا برامج أو مواقع ويب أو موارد خارجية.", rules_bans_3: "لا كتب أو ملاحظات شخصية.", rules_bans_4: "لا تعاون. يجب أن يكون العمل فرديًا بنسبة 100٪.",
-                participants_title: "مشاركونا", participants_subtitle: "تهانينا لجميع التلاميذ الذين شاركوا في الاختبارات.",
-                participants_r1_r2: "المشاركون في الجولتين 1 و 2", participants_r3: "المشاركون في الجولة 3",
-                participants_r3_senior: "فئة الأكابر", participants_r3_junior: "فئة الأصاغر",
-                results_title: "المواضيع والحلول", results_subtitle: "استكشف المسائل التي شكلت تحديًا لمشاركينا.",
-                results_r1: "الجولة الأولى", results_r2: "الجولة الثانية", results_r3: "الجولة الثالثة",
-                results_subject_ar: "الموضوع (عربي)", results_subject_fr: "الموضوع (فرنسي)", results_solutions: "الحلول",
-                results_junior: "فئة الأصاغر", results_senior: "فئة الأكابر",
-                team_title: "الفريق المنظم", team_subtitle: "الأشخاص المتفانون الذين جعلوا هذا الحدث ممكنًا.",
-                team_lead: "القيادة والتنظيم", team_problems: "إعداد المسائل", team_proctors: "المراقبون", team_latex: "فريق LaTeX",
-                footer_title: "انضم إلى مجتمعنا", footer_copy: "© 2025 الأولمبياد الجزائري للرياضيات. جميع الحقوق محفوظة."
+                asmc_title: "المعسكر الصيفي الجزائري للرياضيات 2025",
+                asmc_subtitle: "المعسكر الصيفي الجزائري للرياضيات",
+                nav_about: "حول",
+                nav_timeline: "الجدول الزمني",
+                nav_rules: "القواعد",
+                nav_participants: "المشاركون",
+                nav_resources: "المصادر",
+                nav_team: "الفريق",
+                lang_button: "Français",
+                discord_button: "ديسكورد",
+                contact_button: "تواصل معنا",
+                hero_title: "الأولمبياد الجزائري للرياضيات",
+                hero_subtitle: "أرشيف 2025",
+                hero_description: "انتهى بنجاح اختبار التأهيل للمعسكر الصيفي 2025/2026. يحتوي هذا الأرشيف على جميع الوثائق والمشاركين ونتائج هذه النسخة التاريخية.",
+                hero_button_subjects: "تصفح المواضيع",
+                hero_button_participants: "عرض المشاركين",
+                about_title: "حول الحدث",
+                about_subtitle: "حدث للتميز في الرياضيات جمع أفضل المواهب في البلاد",
+                stats_total_participants: "إجمالي المشاركين",
+                stats_evaluation_rounds: "جولات التقييم",
+                stats_selected_final: "المتأهلون في النهاية",
+                context_title: "السياق والأهداف",
+                context_p1: "في إطار التحضير للمسابقات الدولية   للرياضيات، نظمنا  سلسلة من امتحانات التأهيل خلال شهر أوت 2025.",
+                context_p2: "كان الهدف هو تحديد واختيار أبرز المواهب الرياضية في البلاد للمشاركة في المعسكر التدريبي المكثف لصيف 2025/2026، التحضيري للأولمبياد الدولي.",
+                context_p3: "استفاد غالبية المشاركين بالفعل من برنامج التدريب في جوان وشاركوا في الأولمبياد الوطني للرياضيات الذي نظم في ثانوية الرياضيات بالقبة في بداية جويلية 2025.",
+                timeline_title: "الجدول الزمني للاختبارات",
+                timeline_subtitle: "ثلاث جولات مكثفة اختبرت التميز الرياضي",
+                timeline_round1_title: "الجولة الأولى",
+                timeline_round1_date: "3 أوت 2025",
+                timeline_round1_time: "الأحد • 9:00 - 12:00",
+                timeline_round1_desc: "أسئلة متعددة الخيارات لتقييم المعارف الأساسية. جمع هذا الاختبار الأول <strong class='text-indigo-400'>142 مشاركًا</strong> من جميع المستويات المؤهلة.",
+                timeline_round1_info: "<i class='fas fa-users mr-2'></i>142 مشاركًا • أسئلة متعددة الخيارات",
+                timeline_round2_title: "الجولة الثانية",
+                timeline_round2_date: "5 أوت 2025",
+                timeline_round2_time: "الثلاثاء • 9:00 - 12:00",
+                timeline_round2_desc: "سلسلة جديدة من الأسئلة متعددة الخيارات مع زيادة في التعقيد. واجه <strong class='text-purple-400'>135 مشاركًا</strong> تحدي هذه المرحلة الثانية من التأهيل.",
+                timeline_round2_info: "<i class='fas fa-users mr-2'></i>135 مشاركًا • تعقيد مرتفع",
+                timeline_round3_title: "الجولة الثالثة - النهائية",
+                timeline_round3_date: "7 أوت 2025",
+                timeline_round3_time: "الخميس • 9:00 - 13:00",
+                timeline_round3_desc: "الاختبار النهائي المخصص لـ <strong class='text-pink-400'>أفضل 57 مشاركًا</strong> تم اختيارهم بناءً على نتائج الجولتين الأوليين. تنسيق براهين كاملة لتقييم الدقة الرياضية.",
+                timeline_round3_info: "<i class='fas fa-star mr-2'></i>57 متأهلاً • براهين كاملة",
+                rules_title: "قواعد الامتحان",
+                rules_subtitle: "النزاهة والإنصاف في صميم منافستنا.",
+                rules_reqs_title: "المتطلبات",
+                rules_reqs_1: "يجب أن تكون الكاميرا ومشاركة الشاشة نشطة طوال الوقت.",
+                rules_reqs_2: "يجب أن يكون الوجه واليدان ومساحة العمل واضحة للعيان.",
+                rules_reqs_3: "بيئة هادئة ومضاءة جيدًا.",
+                rules_reqs_4: "15 دقيقة لمسح الإجابات ضوئيًا وإرسالها بعد النهاية.",
+                rules_bans_title: "الممنوعات",
+                rules_bans_1: "لا آلات حاسبة أو منقلة.",
+                rules_bans_2: "لا برامج أو مواقع ويب أو موارد خارجية.",
+                rules_bans_3: "لا كتب أو ملاحظات شخصية.",
+                rules_bans_4: "لا تعاون. يجب أن يكون العمل فرديًا بنسبة 100٪.",
+                participants_title: "مشاركونا",
+                participants_subtitle: "تهانينا لجميع الطلاب الذين شاركوا في هذه النسخة الاستثنائية",
+                participants_round12_title: "المشاركون في الجولتين 1 و 2",
+                participants_round12_subtitle: "142 مشاركًا في المجموع",
+                participants_round3_title: "المتأهلون للنهائي - الجولة 3",
+                participants_round3_subtitle: "57 مشاركً�� متأهلاً",
+                participants_senior_title: "فئة الكبار - 34 مشاركًا",
+                participants_junior_title: "فئة الصغار - 23 مشاركًا",
+                resources_title: "المواضيع والتصحيحات",
+                resources_subtitle: "جميع الوثائق الرسمية لاختبار التأهيل ASMC 2025",
+                resources_round1_title: "الجولة الأولى",
+                resources_round1_subtitle: "3 أوت 2025 • أسئلة متعددة الخيارات",
+                resources_subject_arabic: "الموضوع (العربية)",
+                resources_subject_french: "الموضوع (الفرنسية)",
+                resources_correction: "التصحيح",
+                resources_round2_title: "الجولة الثانية",
+                resources_round2_subtitle: "5 أوت 2025 • أسئلة متعددة الخيارات",
+                resources_round3_title: "الجولة الثالثة - النهائية",
+                resources_round3_subtitle: "7 أوت 2025 • براهين كاملة",
+                resources_junior_category: "فئة الصغار",
+                resources_senior_category: "فئة الكبار",
+                team_title: "فريق التنظيم",
+                team_subtitle: "الأشخاص المتفانون الذين جعلوا هذا الحدث الاستثنائي ممكنًا",
+                team_leadership_title: "الإدارة والتنظيم",
+                team_leadership_subtitle: "القيادة والتنسيق العام",
+                team_problems_title: "تصميم المسائل",
+                team_problems_subtitle: "إنشاء وتطوير الاختبارات",
+                team_proctors_title: "فريق المراقبة",
+                team_proctors_subtitle: "الإشراف ومراقبة الاختبارات",
+                team_latex_title: "فريق LaTeX",
+                team_latex_subtitle: "تنسيق وتصميم الوثائق",
+                footer_about_title: "المعسكر الصيفي الجزائري للرياضيات 2025",
+                footer_about_desc: "الأرشيف الرسمي للأولمبياد الجزائري للرياضيات 2025. خطوة حاسمة نحو التميز الرياضي الدولي.",
+                footer_links_title: "روابط سريعة",
+                footer_community_title: "المجتمع",
+                footer_community_discord: "انضم إلى ديسكورد",
+                footer_community_telegram: "قناة تلغرام",
+                footer_developer_title: "المطور",
+                footer_copyright: "&copy; 2025 الأولمبياد الجزائري للرياضيات. جميع الحقوق محفوظة.",
+                footer_developed_with: "تم التطوير بكل شغف",
+                footer_for_community: "للمجتمع الرياضي الجزائري",
             }
         };
 
+        let currentLang = 'fr';
+
         function setLanguage(lang) {
+            currentLang = lang;
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            
-            document.querySelectorAll('[data-lang-key]').forEach(element => {
-                const key = element.getAttribute('data-lang-key');
+
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
                 if (translations[lang][key]) {
                     element.innerHTML = translations[lang][key];
                 }
             });
-
-            document.getElementById('current-lang').textContent = lang.toUpperCase();
-            localStorage.setItem('amo_lang', lang);
-        }
-        
-        function populateList(selector, data) {
-            const container = document.querySelector(selector);
-            if (container) {
-                container.innerHTML = data.map(name => `<span>${name}</span>`).join('');
-            } else {
-                console.error(`Container not found for selector: ${selector}`);
-            }
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // Populate lists with data
-            populateList('#participants-r1-r2-list', participantsR1R2);
-            populateList('#participants-r3-senior-list', participantsR3Senior);
-            populateList('#participants-r3-junior-list', participantsR3Junior);
+        document.getElementById('lang-switcher').addEventListener('click', () => {
+            const newLang = currentLang === 'fr' ? 'ar' : 'fr';
+            setLanguage(newLang);
+        });
 
-            // Set initial language from storage or default to French
-            const savedLang = localStorage.getItem('amo_lang') || 'fr';
-            setLanguage(savedLang);
-
-            // --- UI LOGIC ---
-            // Accordion functionality
-            const accordionToggles = document.querySelectorAll('.accordion-toggle');
-            accordionToggles.forEach(toggle => {
-                toggle.addEventListener('click', () => {
-                    const content = toggle.nextElementSibling;
-                    const icon = toggle.querySelector('i[data-lucide="chevron-down"]');
-                    
-                    // Close other open accordions
-                    document.querySelectorAll('.accordion-content').forEach(item => {
-                        if (item !== content && item.style.maxHeight) {
-                            item.style.maxHeight = null;
-                            const otherIcon = item.previousElementSibling.querySelector('i[data-lucide="chevron-down"]');
-                            if (otherIcon) {
-                                otherIcon.style.transform = 'rotate(0deg)';
-                            }
-                        }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
+                }
+            });
+        });
 
-                    // Toggle current accordion
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        if(icon) icon.style.transform = 'rotate(0deg)';
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        if(icon) icon.style.transform = 'rotate(180deg)';
+        // Accordion functionality
+        document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.rotating-icon');
+                
+                // Close other accordions
+                document.querySelectorAll('.accordion-content').forEach(otherContent => {
+                    if (otherContent !== content && otherContent.classList.contains('accordion-open')) {
+                        otherContent.classList.remove('accordion-open');
+                        const otherIcon = otherContent.previousElementSibling.querySelector('.rotating-icon');
+                        if (otherIcon) otherIcon.classList.remove('rotate-180');
                     }
                 });
+                
+                // Toggle current accordion
+                content.classList.toggle('accordion-open');
+                if (icon) icon.classList.toggle('rotate-180');
             });
+        });
 
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetElement = document.querySelector(this.getAttribute('href'));
-                    if (targetElement) {
-                       targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+        // Add some scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
             });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
     </script>
 </body>
