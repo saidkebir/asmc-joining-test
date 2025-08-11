@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympiade Algérienne de Mathématiques 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            background-color: #050a1a;
+            color: #e0e0e0;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(5, 10, 26, 0.9), rgba(5, 10, 26, 1)), url('https://placehold.co/1920x1080/0a192f/e0e0e0?text=Math+Patterns');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 900;
+        }
+        .card {
+            background-color: rgba(17, 24, 39, 0.5);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .btn-primary {
+            background-color: #4f46e5;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca;
+        }
+        .btn-secondary {
+            background-color: #374151;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #4b5563;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1f2937;
+            border: 4px solid #4f46e5;
+            z-index: 1;
+        }
+        html[dir="rtl"] .timeline-item::before { right: -21px; }
+        html[dir="ltr"] .timeline-item::before { left: -21px; }
+
+        .timeline-line {
+            position: absolute;
+            top: 20px;
+            bottom: 0;
+            width: 4px;
+            background-color: #374151;
+        }
+        html[dir="rtl"] .timeline-line { right: -3px; }
+        html[dir="ltr"] .timeline-line { left: -3px; }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        
+        #lang-switcher .lang-option {
+            display: none;
+        }
+        #lang-switcher:hover .lang-option {
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="p-4 md:p-6 sticky top-0 z-50 card">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold text-white">
+                <span class="text-indigo-400">ASMC</span> 2025
+            </h1>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#about" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_about">À propos</a>
+                <a href="#schedule" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_schedule">Calendrier</a>
+                <a href="#rules" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_rules">Règles</a>
+                <a href="#participants" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_participants">Participants</a>
+                <a href="#results" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_results">Résultats</a>
+                <a href="#team" class="hover:text-indigo-400 transition-colors" data-lang-key="nav_team">L'équipe</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://discord.gg/pxfe6VZ9du" target="_blank" class="btn-secondary text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
+                    <svg fill="white" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.533 3.227a2.2 2.2 0 0 0-1.867-.96h-.003a14.226 14.226 0 0 0-3.53.663 12.34 12.34 0 0 0-2.56 1.543 12.52 12.52 0 0 0-3.146 0A12.34 12.34 0 0 0 7.87 2.93a14.226 14.226 0 0 0-3.53-.663 2.2 2.2 0 0 0-1.87.96c-.533.8-.667 1.867-.4 2.8.667 2.4 1.867 4.667 3.467 6.533a12.04 12.04 0 0 0-2.4 1.467 1.6 1.6 0 0 0-.667 1.2 1.733 1.733 0 0 0 .667 1.466C5.2 18.133 7.267 19.6 9.6 20.533a13.214 13.214 0 0 0 2.4.667c.267 0 .533 0 .8-.067a13.12 13.12 0 0 0 2.4-.667c2.333-.933 4.4-2.4 5.733-3.866a1.733 1.733 0 0 0 .667-1.467 1.6 1.6 0 0 0-.667-1.2 12.04 12.04 0 0 0-2.4-1.467c1.6-1.866 2.8-4.133 3.467-6.533.266-.933.133-2-.4-2.8ZM9.733 15.2c-1.2 0-2.133-1.067-2.133-2.4 0-1.333.933-2.4 2.133-2.4s2.133 1.067 2.133 2.4c0 1.333-.933 2.4-2.133 2.4Zm4.534 0c-1.2 0-2.133-1.067-2.133-2.4 0-1.333.933-2.4 2.133-2.4s2.133 1.067 2.133 2.4c0 1.333-.933 2.4-2.133 2.4Z"/></svg>
+                    <span>Discord</span>
+                </a>
+                <!-- Language Switcher -->
+                <div id="lang-switcher" class="relative">
+                    <button class="btn-secondary text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2">
+                        <i data-lucide="globe"></i>
+                        <span id="current-lang">FR</span>
+                    </button>
+                    <div class="absolute top-full right-0 mt-2 w-full card rounded-lg overflow-hidden">
+                        <button onclick="setLanguage('fr')" class="lang-option w-full text-left px-4 py-2 hover:bg-gray-700">Français</button>
+                        <button onclick="setLanguage('en')" class="lang-option w-full text-left px-4 py-2 hover:bg-gray-700">English</button>
+                        <button onclick="setLanguage('ar')" class="lang-option w-full text-left px-4 py-2 hover:bg-gray-700">العربية</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero-bg">
+        <section class="container mx-auto px-4 py-20 md:py-32 text-center">
+            <h2 class="text-4xl md:text-6xl font-black text-white leading-tight section-title" data-lang-key="hero_title">
+                Olympiade Algérienne de <span class="text-indigo-400">Mathématiques</span>
+            </h2>
+            <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300" data-lang-key="hero_subtitle">
+                L'épreuve de sélection pour le stage d'été 2025/2026. Votre premier pas vers l'excellence et les compétitions internationales.
+            </p>
+            <div class="mt-8">
+                <a href="#results" class="btn-primary text-white font-bold py-3 px-8 rounded-lg text-lg" data-lang-key="hero_button">
+                    Voir les Résultats
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div class="container mx-auto px-4 py-16 md:py-24 space-y-24">
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="about_title">Qui a participé ?</h3>
+                <p class="mt-2 text-gray-400 max-w-2xl mx-auto" data-lang-key="about_subtitle">L'examen était ouvert aux esprits les plus brillants des cycles moyen et secondaire.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6 rounded-xl text-center">
+                    <div class="flex justify-center mb-4"><div class="bg-indigo-500/20 p-3 rounded-full"><i data-lucide="graduation-cap" class="text-indigo-400 w-8 h-8"></i></div></div>
+                    <h4 class="text-xl font-bold text-white" data-lang-key="about_middle">Cycle Moyen</h4>
+                    <p class="text-gray-400 mt-2" data-lang-key="about_middle_desc">Élèves de 3ème année (3AM) et 4ème année (4AM).</p>
+                </div>
+                <div class="card p-6 rounded-xl text-center">
+                    <div class="flex justify-center mb-4"><div class="bg-green-500/20 p-3 rounded-full"><i data-lucide="book-marked" class="text-green-400 w-8 h-8"></i></div></div>
+                    <h4 class="text-xl font-bold text-white" data-lang-key="about_high">Cycle Secondaire</h4>
+                    <p class="text-gray-400 mt-2" data-lang-key="about_high_desc">Élèves de 1ère (1AS), 2ème (2AS), et 3ème année (3AS).</p>
+                </div>
+                <div class="card p-6 rounded-xl text-center md:col-span-2 lg:col-span-1">
+                    <div class="flex justify-center mb-4"><div class="bg-yellow-500/20 p-3 rounded-full"><i data-lucide="star" class="text-yellow-400 w-8 h-8"></i></div></div>
+                    <h4 class="text-xl font-bold text-white" data-lang-key="about_experienced">Participants Expérimentés</h4>
+                    <p class="text-gray-400 mt-2" data-lang-key="about_experienced_desc">Beaucoup avaient déjà participé au stage de juin et à l'Olympiade Nationale.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="schedule_title">Déroulement de l'Examen</h3>
+                <p class="mt-2 text-gray-400" data-lang-key="schedule_subtitle">Un défi intellectuel réparti sur trois manches intenses.</p>
+            </div>
+            <div class="relative max-w-3xl mx-auto">
+                <div class="timeline-line"></div>
+                <div class="space-y-16">
+                    <div class="relative px-8 md:px-12 timeline-item">
+                        <div class="card p-6 rounded-xl"><p class="text-sm font-semibold text-indigo-400" data-lang-key="schedule_r1_date">Dimanche 3 Août 2025 (9:00 - 12:00)</p><h4 class="text-xl font-bold text-white mt-2" data-lang-key="schedule_r1_title">Première Manche</h4><p class="text-gray-400 mt-2" data-lang-key="schedule_r1_desc">Questions à choix multiples pour 142 participants. Une première épreuve pour tester les connaissances fondamentales.</p></div>
+                    </div>
+                    <div class="relative px-8 md:px-12 timeline-item">
+                        <div class="card p-6 rounded-xl"><p class="text-sm font-semibold text-indigo-400" data-lang-key="schedule_r2_date">Mardi 5 Août 2025 (9:00 - 12:00)</p><h4 class="text-xl font-bold text-white mt-2" data-lang-key="schedule_r2_title">Deuxième Manche</h4><p class="text-gray-400 mt-2" data-lang-key="schedule_r2_desc">Une autre série de questions à choix multiples pour 135 concurrents, augmentant la complexité.</p></div>
+                    </div>
+                    <div class="relative px-8 md:px-12 timeline-item">
+                        <div class="card p-6 rounded-xl"><p class="text-sm font-semibold text-indigo-400" data-lang-key="schedule_r3_date">Jeudi 7 Août 2025 (9:00 - 12:00)</p><h4 class="text-xl font-bold text-white mt-2" data-lang-key="schedule_r3_title">Troisième Manche</h4><p class="text-gray-400 mt-2" data-lang-key="schedule_r3_desc">L'épreuve finale pour les 57 meilleurs participants. Rédaction de preuves complètes pour démontrer la maîtrise et la rigueur mathématique.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section id="rules">
+            <div class="text-center mb-12"><h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="rules_title">Règles de l'Examen</h3><p class="mt-2 text-gray-400" data-lang-key="rules_subtitle">L'intégrité et l'équité sont au cœur de notre compétition.</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-8 rounded-xl"><h4 class="text-2xl font-bold text-green-400 flex items-center gap-2"><i data-lucide="check-circle" class="w-8 h-8"></i> <span data-lang-key="rules_reqs_title">Exigences</span></h4><ul class="mt-4 space-y-3 text-gray-300 list-inside"><li class="flex items-start"><i data-lucide="video" class="w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i><span data-lang-key="rules_reqs_1">Caméra et partage d'écran actifs en permanence.</span></li><li class="flex items-start"><i data-lucide="user-check" class="w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i><span data-lang-key="rules_reqs_2">Visage, mains et espace de travail clairement visibles.</span></li><li class="flex items-start"><i data-lucide="volume-x" class="w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i><span data-lang-key="rules_reqs_3">Environnement calme et bien éclairé.</span></li><li class="flex items-start"><i data-lucide="scan-line" class="w-5 h-5 mt-1 mx-2 text-green-400 flex-shrink-0"></i><span data-lang-key="rules_reqs_4">15 minutes pour numériser et envoyer les réponses après la fin.</span></li></ul></div>
+                <div class="card p-8 rounded-xl"><h4 class="text-2xl font-bold text-red-400 flex items-center gap-2"><i data-lucide="x-circle" class="w-8 h-8"></i> <span data-lang-key="rules_bans_title">Interdictions</span></h4><ul class="mt-4 space-y-3 text-gray-300 list-inside"><li class="flex items-start"><i data-lucide="calculator" class="w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i><span data-lang-key="rules_bans_1">Aucune calculatrice ou rapporteur.</span></li><li class="flex items-start"><i data-lucide="globe" class="w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i><span data-lang-key="rules_bans_2">Aucun logiciel, site web ou ressource externe.</span></li><li class="flex items-start"><i data-lucide="book-x" class="w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i><span data-lang-key="rules_bans_3">Aucun livre ou note personnelle.</span></li><li class="flex items-start"><i data-lucide="users" class="w-5 h-5 mt-1 mx-2 text-red-400 flex-shrink-0"></i><span data-lang-key="rules_bans_4">Aucune collaboration. Le travail doit être 100% individuel.</span></li></ul></div>
+            </div>
+        </section>
+
+        <!-- Participants Section -->
+        <section id="participants">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="participants_title">Nos Participants</h3>
+                <p class="mt-2 text-gray-400" data-lang-key="participants_subtitle">Félicitations à tous les élèves qui ont participé aux épreuves.</p>
+            </div>
+            <div class="max-w-6xl mx-auto space-y-4 accordion-container">
+                 <div class="card rounded-lg">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white">
+                        <span data-lang-key="participants_r1_r2">Participants aux Manches 1 & 2</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 pb-5">
+                        <div id="participants-r1-r2-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-2 text-gray-300 pt-4">
+                            <!-- List will be populated by JS -->
+                        </div>
+                    </div>
+                </div>
+                 <div class="card rounded-lg">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white">
+                        <span data-lang-key="participants_r3">Participants à la Manche 3</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-5 pb-5 pt-4">
+                        <h4 class="text-lg font-bold text-indigo-300 mb-3" data-lang-key="participants_r3_senior">Catégorie Senior</h4>
+                        <div id="participants-r3-senior-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-2 text-gray-300 mb-6">
+                            <!-- Senior list will be populated by JS -->
+                        </div>
+                        <h4 class="text-lg font-bold text-indigo-300 mb-3" data-lang-key="participants_r3_junior">Catégorie Junior</h4>
+                        <div id="participants-r3-junior-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-8 gap-y-2 text-gray-300">
+                            <!-- Junior list will be populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Resources Section -->
+        <section id="results">
+            <div class="text-center mb-12"><h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="results_title">Sujets et Corrigés</h3><p class="mt-2 text-gray-400" data-lang-key="results_subtitle">Explorez les problèmes qui ont mis au défi nos participants.</p></div>
+            <div class="space-y-10">
+                <div class="card p-6 rounded-xl"><h4 class="text-2xl font-bold text-white mb-4" data-lang-key="results_r1">Première Manche</h4><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"><a href="https://drive.google.com/file/d/1-ZM-pAZB4MeM2iC5nVzf0j4jeW6N7ADp/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_ar">Sujet (Arabe)</span></a><a href="https://drive.google.com/file/d/1JmgGXindz0L1Cnc7wxEPmvqDXwp21i7O/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_fr">Sujet (Français)</span></a><a href="https://drive.google.com/file/d/1SB5RS7uQFZk1kPIJfMV_KN1X-3gAy08z/view?usp=drive_link" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2 transition-colors"><i data-lucide="check-check"></i><span data-lang-key="results_solutions">Corrigé</span></a></div></div>
+                <div class="card p-6 rounded-xl"><h4 class="text-2xl font-bold text-white mb-4" data-lang-key="results_r2">Deuxième Manche</h4><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"><a href="https://drive.google.com/file/d/17Jed-1wR50_TESczTnVLOdcJDOWGU288/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_ar">Sujet (Arabe)</span></a><a href="https://drive.google.com/file/d/14qab4ojhAJz3Wo6P0Azhz3nlbLghZXNS/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_fr">Sujet (Français)</span></a><a href="https://drive.google.com/file/d/1B8RgHXC6k2RzLUYySmrHkv1c66ZnT1AJ/view?usp=drive_link" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2 transition-colors"><i data-lucide="check-check"></i><span data-lang-key="results_solutions">Corrigé</span></a></div></div>
+                <div class="card p-6 rounded-xl"><h4 class="text-2xl font-bold text-white mb-4" data-lang-key="results_r3">Troisième Manche</h4><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="card p-4 rounded-lg"><h5 class="font-bold text-lg text-indigo-300 mb-3" data-lang-key="results_junior">Catégorie Junior</h5><div class="flex flex-col space-y-3"><a href="https://drive.google.com/file/d/1kNhdGvVjpL80KfLuE-vPcQTiz536QzC-/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_ar">Sujet (Arabe)</span></a><a href="https://drive.google.com/file/d/17V_cqn6HoFIw_1e66LslBSQbYJ-qPQ6n/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_fr">Sujet (Français)</span></a></div></div><div class="card p-4 rounded-lg"><h5 class="font-bold text-lg text-indigo-300 mb-3" data-lang-key="results_senior">Catégorie Senior</h5><div class="flex flex-col space-y-3"><a href="https://drive.google.com/file/d/1xjLTKJ2xcP2cc8zD5p5pqiwd7mtsPf2t/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_ar">Sujet (Arabe)</span></a><a href="https://drive.google.com/file/d/1o9o7aLonuFvtmTOcx8Jn883T0eJH1hFL/view?usp=drive_link" target="_blank" class="btn-secondary text-white font-semibold py-3 px-5 rounded-lg flex items-center justify-center gap-2"><i data-lucide="file-text"></i><span data-lang-key="results_subject_fr">Sujet (Français)</span></a></div></div></div></div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team">
+            <div class="text-center mb-12"><h3 class="text-3xl md:text-4xl section-title text-white" data-lang-key="team_title">L'Équipe d'Organisation</h3><p class="mt-2 text-gray-400" data-lang-key="team_subtitle">Les personnes dévouées qui ont rendu cet événement possible.</p></div>
+            <div class="max-w-4xl mx-auto space-y-4 accordion-container">
+                <div class="card rounded-lg"><button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white"><span data-lang-key="team_lead">Direction & Organisation</span><i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i></button><div class="accordion-content px-5 pb-5"><p class="text-gray-300 pt-4">Said Kebir</p></div></div>
+                <div class="card rounded-lg"><button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white"><span data-lang-key="team_problems">Conception des Sujets</span><i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i></button><div class="accordion-content px-5 pb-5"><p class="text-gray-300 pt-4">Azeddine Lekkam, Benkedadra Asmae, MOHAMED ASSIL SI AHMED, Chamseddine Derreche, Abdellaoui Sidali, Taki Boussalem, Wissal MECHRI, Meghabber Mohammed Al Ghazali</p></div></div>
+                <div class="card rounded-lg"><button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white"><span data-lang-key="team_proctors">Superviseurs</span><i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i></button><div class="accordion-content px-5 pb-5"><p class="text-gray-300 pt-4">Abdellaoui Sidali, LARINOUNA SELMA, Kheira Mihoub, Loullou hind, Fady Kheloui, Amani Aridja, Bouazza Mohamed Nadir, Batoul Aggoun, Taki Boussalem, Nour malak larbi, Doha Bouali, Fatima Zahra Kihel, Wissal MECHRI, Maroua Guellati, Heddadi Sara, Daghboudj Mohamed, Ben Si Said Dihia, Nada, rayan saada, Meghabber mohammed Al Ghazali, islam cherïat, Amani Sebti, Hadil Bellili, Messai Rostome, Tolba Mouatez Billah</p></div></div>
+                <div class="card rounded-lg"><button class="accordion-toggle w-full flex justify-between items-center p-5 text-xl font-bold text-white"><span data-lang-key="team_latex">Équipe LaTeX</span><i data-lucide="chevron-down" class="w-6 h-6 transition-transform"></i></button><div class="accordion-content px-5 pb-5"><p class="text-gray-300 pt-4">Abdellaoui Sidali, Said Kebir, ALI BEN CHIKH</p></div></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 border-t border-gray-800">
+        <div class="container mx-auto px-4 py-8 text-center text-gray-400">
+            <p class="font-bold text-lg text-white" data-lang-key="footer_title">Rejoignez notre communauté</p>
+            <div class="flex justify-center gap-6 mt-4 mb-6">
+                <a href="https://discord.gg/pxfe6VZ9du" target="_blank" class="hover:text-indigo-400 transition-colors"><svg fill="white" width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8"><path d="M21.533 3.227a2.2 2.2 0 0 0-1.867-.96h-.003a14.226 14.226 0 0 0-3.53.663 12.34 12.34 0 0 0-2.56 1.543 12.52 12.52 0 0 0-3.146 0A12.34 12.34 0 0 0 7.87 2.93a14.226 14.226 0 0 0-3.53-.663 2.2 2.2 0 0 0-1.87.96c-.533.8-.667 1.867-.4 2.8.667 2.4 1.867 4.667 3.467 6.533a12.04 12.04 0 0 0-2.4 1.467 1.6 1.6 0 0 0-.667 1.2 1.733 1.733 0 0 0 .667 1.466C5.2 18.133 7.267 19.6 9.6 20.533a13.214 13.214 0 0 0 2.4.667c.267 0 .533 0 .8-.067a13.12 13.12 0 0 0 2.4-.667c2.333-.933 4.4-2.4 5.733-3.866a1.733 1.733 0 0 0 .667-1.467 1.6 1.6 0 0 0-.667-1.2 12.04 12.04 0 0 0-2.4-1.467c1.6-1.866 2.8-4.133 3.467-6.533.266-.933.133-2-.4-2.8ZM9.733 15.2c-1.2 0-2.133-1.067-2.133-2.4 0-1.333.933-2.4 2.133-2.4s2.133 1.067 2.133 2.4c0 1.333-.933 2.4-2.133 2.4Zm4.534 0c-1.2 0-2.133-1.067-2.133-2.4 0-1.333.933-2.4 2.133-2.4s2.133 1.067 2.133 2.4c0 1.333-.933 2.4-2.133 2.4Z"/></svg></a>
+                <a href="https://t.me/algerianmo" target="_blank" class="hover:text-indigo-400 transition-colors"><i data-lucide="send" class="w-8 h-8"></i></a>
+            </div>
+            <p data-lang-key="footer_copy">&copy; 2025 Olympiade Algérienne de Mathématiques. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data and functions that don't need the DOM can stay outside
+        lucide.createIcons();
+        
+        const participantsR1R2 = [
+            "Mael Shawaly", "Mohamed Kihel", "Aya Ben alia", "Mohamed Ziad Alaoui", "Zakraia Mohamed Tahar Madaoui", "Youcef Hefassa", "nadjemddine CHIAOUI", "Amir Mohamed Rassym Rahal", "Anfel Laouati", "Yahya Abderrahmane BOUROUINA", "Fairouz Benyounes", "fadhel hadj djilali", "Iyed Baassou", "Fares Khelif", "Anfal Guellati", "Sofiane Bouricha", "Diaa el hak Bezzaz", "Mouadh Hamane", "ALAA ERRAHMANE ZITOUNE", "Aymen Aouragh", "Mohamed Alaa eddin Khelifi", "Aridj Athmani", "Aya Ailane", "Mohammed Rafik Mendas", "Oussama Ahmed Mostapha Naoui", "MOHAMMED ZAHREDDINE BADJI", "Abderrahmane Ghebouli", "Haithem Djefel", "Mohamed Ouassim Guettache", "Omar Badis", "iness baassou", "Rostom Mohamed Kamel Bouabdallah", "Yara Ammari Ammari", "Kawther Salsabil GHAZ", "Yara Louise Shawaly", "Mounir Maamar Zmiri", "Malek Negli", "Yacine Lamdjadani", "Taim Allah Hamane", "Amir Amaieur", "Asma Zeineb Masmoudi", "Hassan Dhaian", "Meriem Telhaoui", "Mohammed Abdelssamad Tir", "Mohamed Mehdi Medjiah", "Nazim Mohamdi", "Baraa Halkoum", "Wassim Ouachek", "Ahmed Fouhal", "Abd essamad Ferroudji", "wahiba manel khali", "Mohamed Islam Lakhdari", "Abd Rahim Mellouli", "Razine Adnani", "Fares mokhtar Missoum", "hadi boudjelal", "Meriem Ouerdane", "Zakarya Belkherouf", "TAKOUA AMANI SELLAOUI", "sajida slimani", "Khadidja Djihane Ahmed Yahia", "Serine Henni", "YACINE BESSOUYAH", "Abdelsalam Belkacemi", "Bouchra Gacioui", "Aghiles Ben Si Said", "Mohamed Messekher", "Αla Khaled", "Nesrine Mazouz", "Layane Harnane", "Achraf Bessir", "Adem Chetbi", "Nouha Mazouz", "Lyna Boughareb", "Ghada Meisse Ziane", "ola lazouti", "Mohamed Bessedik", "Insaf Berbache", "Ibrahim Guellati", "lyna lazizi", "Anouar Abderrahmane Taleb", "Rouya Boumendjel", "Ines Messadia", "Halla meriem Mahiouz", "Abdellah Issam Kerfah", "Mohamed Zakaria Boulbene", "Ahmed Fouad Fateh Zouak", "Abd raouf Belli", "Yanis Bellout", "Mohamed Ayoub BenGherbia", "Amine Zeyour", "Taha Abderrahmane Guendouz", "Mehdi Hadjout", "Ritadje Belkhiri", "Ayoub Trad", "Walid Elahacene", "Abderahmene Bennadji", "Amira hana Ouanes", "Manar Bourouila", "Ahmed Guerrout", "Khadidja Brainis", "Maram Raghad Telhaoui", "Malak Fridi", "FARHAT BELLI", "asmaa sekhri", "Nihad Atlaoui", "mahdi ghomari", "Massinissa Cheurfa", "Imen Kardi", "Khaoula Hammal", "Dania Bensifi", "Khouloud khaira Bentayeb", "Nada Boularak", "Hibat Errahmane Heddadi", "Aroua arine Ziane", "Farah Halitim", "Koussai adem Chebani", "Mama Douaâ Benarbia", "Amel Gliz", "Inas Amrane", "Nour El Houda Boudaif", "Douaa Bousmaha", "Soumia Zouaghi", "Zakaria Moulebbat", "Rimas Louisa Harnane", "Taim allah Ferroudji"
+        ];
+
+        const participantsR3Senior = [
+            "Mohamed Ikbal Tebib", "Iyed Baassou", "Asma Zeineb Masmoudi", "Hassan Dhaian", "Aridj Athmani", "Mounir Maamar Zmiri", "Mahmoud Bouabdallah", "Nadjemddine CHIAOUI", "Zakaria Mohamed Tahar Madaoui", "Aya Ben alia", "youcef hefassa", "chouaib khebabza", "Abd Errahmane Si Ahmed", "Yahya Abderrahmane BOUROUINA", "Malek Negli", "BADJI MOHAMED ZAHREDDINE", "Mohamed Ouassim Guettache", "Mohamed Alaa eddin Khelifi", "Sofiane BOURICHA", "Fairouz Benyounes", "Taim Allah Hamane", "Amir Amaieur", "Rostom Mohamed Kamel Bouabdallah", "Abderrahmane Ghebouli", "KAWTHER Salsabil GHAZ", "fadhel hadj djilali", "Anfel laouati", "ALAA ERRAHMANE ZITOUNE", "Haithem Djefel", "layane harnane", "alaa yahia", "Meriem Ouerdane", "Kian Abolghasemi", "Yara Saida Ammari"
+        ];
+
+        const participantsR3Junior = [
+            "iness baassou", "Yacine Lamdjadani", "Amir Mohamed Rassym Rahal", "Meriem Telhaoui", "sajida slimani", "Mohamed Kihel", "Aya Ailane", "Mohamed Ziad Alaoui", "Anfal Guellati", "TAKOUA AMANI SELLAOUI", "Diaa el hak Bezzaz", "Nazim Mohamdi", "Mohammed Rafik Mendas", "Abdessamad Ferroudji", "Mael Shawaly", "Mohamed Mehdi Medjiah", "Fares Khelif", "Hadi Boudjelal", "Razine Adnani", "Omar Badis", "Yara Louise Shawaly", "Aymen Aouragh"
+        ];
+
+        const translations = {
+            en: {
+                nav_about: "About", nav_schedule: "Schedule", nav_rules: "Rules", nav_participants: "Participants", nav_results: "Results", nav_team: "The Team",
+                hero_title: "Algerian Mathematical <span class='text-indigo-400'>Olympiad</span>",
+                hero_subtitle: "The selection test for the 2025/2026 summer camp. Your first step towards excellence and international competitions.",
+                hero_button: "Subjects and Solutions",
+                about_title: "Who Participated?", about_subtitle: "The exam was open to the brightest minds from middle and high schools.",
+                about_middle: "Middle School", about_middle_desc: "Students from 3rd (3AM) and 4th year (4AM).",
+                about_high: "High School", about_high_desc: "Students from 1st (1AS), 2nd (2AS), and 3rd year (3AS).",
+                about_experienced: "Experienced Participants", about_experienced_desc: "Many had already participated in the June training camp and the National Olympiad.",
+                schedule_title: "Exam Schedule", schedule_subtitle: "An intellectual challenge spread over three intense rounds.",
+                schedule_r1_date: "Sunday, August 3, 2025 (9:00 AM - 12:00 PM)", schedule_r1_title: "First Round", schedule_r1_desc: "Multiple-choice questions for 142 participants. A first test of fundamental knowledge.",
+                schedule_r2_date: "Tuesday, August 5, 2025 (9:00 AM - 12:00 PM)", schedule_r2_title: "Second Round", schedule_r2_desc: "Another set of multiple-choice questions for 135 competitors, increasing in complexity.",
+                schedule_r3_date: "Thursday, August 7, 2025 (9:00 AM - 12:00 PM)", schedule_r3_title: "Third Round", schedule_r3_desc: "The final test for the top 57 participants. Writing complete proofs to demonstrate mastery and mathematical rigor.",
+                rules_title: "Exam Rules", rules_subtitle: "Integrity and fairness are at the heart of our competition.",
+                rules_reqs_title: "Requirements", rules_reqs_1: "Camera and screen sharing must be active at all times.", rules_reqs_2: "Face, hands, and workspace must be clearly visible.", rules_reqs_3: "Quiet and well-lit environment.", rules_reqs_4: "15 minutes to scan and submit answers after the end.",
+                rules_bans_title: "Prohibitions", rules_bans_1: "No calculators or protractors.", rules_bans_2: "No software, websites, or external resources.", rules_bans_3: "No books or personal notes.", rules_bans_4: "No collaboration. Work must be 100% individual.",
+                participants_title: "Our Participants", participants_subtitle: "Congratulations to all the students who took part in the tests.",
+                participants_r1_r2: "Participants in Rounds 1 & 2", participants_r3: "Participants in Round 3",
+                participants_r3_senior: "Senior Category", participants_r3_junior: "Junior Category",
+                results_title: "Subjects and Solutions", results_subtitle: "Explore the problems that challenged our participants.",
+                results_r1: "First Round", results_r2: "Second Round", results_r3: "Third Round",
+                results_subject_ar: "Subject (Arabic)", results_subject_fr: "Subject (French)", results_solutions: "Solutions",
+                results_junior: "Junior Category", results_senior: "Senior Category",
+                team_title: "The Organizing Team", team_subtitle: "The dedicated people who made this event possible.",
+                team_lead: "Leadership & Organization", team_problems: "Problem Design", team_proctors: "Proctors", team_latex: "LaTeX Team",
+                footer_title: "Join our community", footer_copy: "© 2025 Algerian Mathematical Olympiad. All rights reserved."
+            },
+            fr: {
+                nav_about: "À propos", nav_schedule: "Calendrier", nav_rules: "Règles", nav_participants: "Participants", nav_results: "Résultats", nav_team: "L'équipe",
+                hero_title: "Olympiade Algérienne de <span class='text-indigo-400'>Mathématiques</span>",
+                hero_subtitle: "L'épreuve de sélection pour le stage d'été 2025/2026. Votre premier pas vers l'excellence et les compétitions internationales.",
+                hero_button: "Voir les Résultats",
+                about_title: "Qui a participé ?", about_subtitle: "L'examen était ouvert aux esprits les plus brillants des cycles moyen et secondaire.",
+                about_middle: "Cycle Moyen", about_middle_desc: "Élèves de 3ème année (3AM) et 4ème année (4AM).",
+                about_high: "Cycle Secondaire", about_high_desc: "Élèves de 1ère (1AS), 2ème (2AS), et 3ème année (3AS).",
+                about_experienced: "Participants Expérimentés", about_experienced_desc: "Beaucoup avaient déjà participé au stage de juin et à l'Olympiade Nationale.",
+                schedule_title: "Déroulement de l'Examen", schedule_subtitle: "Un défi intellectuel réparti sur trois manches intenses.",
+                schedule_r1_date: "Dimanche 3 Août 2025 (9:00 - 12:00)", schedule_r1_title: "Première Manche", schedule_r1_desc: "Questions à choix multiples pour 142 participants. Une première épreuve pour tester les connaissances fondamentales.",
+                schedule_r2_date: "Mardi 5 Août 2025 (9:00 - 12:00)", schedule_r2_title: "Deuxième Manche", schedule_r2_desc: "Une autre série de questions à choix multiples pour 135 concurrents, augmentant la complexité.",
+                schedule_r3_date: "Jeudi 7 Août 2025 (9:00 - 12:00)", schedule_r3_title: "Troisième Manche", schedule_r3_desc: "L'épreuve finale pour les 57 meilleurs participants. Rédaction de preuves complètes pour démontrer la maîtrise et la rigueur mathématique.",
+                rules_title: "Règles de l'Examen", rules_subtitle: "L'intégrité et l'équité sont au cœur de notre compétition.",
+                rules_reqs_title: "Exigences", rules_reqs_1: "Caméra et partage d'écran actifs en permanence.", rules_reqs_2: "Visage, mains et espace de travail clairement visibles.", rules_reqs_3: "Environnement calme et bien éclairé.", rules_reqs_4: "15 minutes pour numériser et envoyer les réponses après la fin.",
+                rules_bans_title: "Interdictions", rules_bans_1: "Aucune calculatrice ou rapporteur.", rules_bans_2: "Aucun logiciel, site web ou ressource externe.", rules_bans_3: "Aucun livre ou note personnelle.", rules_bans_4: "Aucune collaboration. Le travail doit être 100% individuel.",
+                participants_title: "Nos Participants", participants_subtitle: "Félicitations à tous les élèves qui ont participé aux épreuves.",
+                participants_r1_r2: "Participants aux Manches 1 & 2", participants_r3: "Participants à la Manche 3",
+                participants_r3_senior: "Catégorie Senior", participants_r3_junior: "Catégorie Junior",
+                results_title: "Sujets et Corrigés", results_subtitle: "Explorez les problèmes qui ont mis au défi nos participants.",
+                results_r1: "Première Manche", results_r2: "Deuxième Manche", results_r3: "Troisième Manche",
+                results_subject_ar: "Sujet (Arabe)", results_subject_fr: "Sujet (Français)", results_solutions: "Corrigé",
+                results_junior: "Catégorie Junior", results_senior: "Catégorie Senior",
+                team_title: "L'Équipe d'Organisation", team_subtitle: "Les personnes dévouées qui ont rendu cet événement possible.",
+                team_lead: "Direction & Organisation", team_problems: "Conception des Sujets", team_proctors: "Superviseurs", team_latex: "Équipe LaTeX",
+                footer_title: "Rejoignez notre communauté", footer_copy: "© 2025 Olympiade Algérienne de Mathématiques. Tous droits réservés."
+            },
+            ar: {
+                nav_about: "حول", nav_schedule: "الجدول الزمني", nav_rules: "القواعد", nav_participants: "المشاركون", nav_results: "النتائج", nav_team: "الفريق",
+                hero_title: "الأولمبياد الجزائري <span class='text-indigo-400'>للرياضيات</span>",
+                hero_subtitle: "امتحان اختيار المشاركين في التدريب الصيفي 2025/2026. خطوتك الأولى نحو التميز والمسابقات الدولية.",
+                hero_button: "المواضيع والحلول",
+                about_title: "من شارك؟", about_subtitle: "كان الامتحان مفتوحًا لألمع العقول في المرحلتين المتوسطة والثانوية.",
+                about_middle: "المستوى المتوسط", about_middle_desc: "تلاميذ السنة الثالثة (3AM) والرابعة (4AM).",
+                about_high: "المستوى الثانوي", about_high_desc: "تلاميذ السنة الأولى (1AS)، الثانية (2AS)، والثالثة (3AS).",
+                about_experienced: "مشاركون ذوو خبرة", about_experienced_desc: "شارك الكثيرون بالفعل في تدريب جوان والأولمبياد الوطني.",
+                schedule_title: "جدول الامتحان", schedule_subtitle: "تحدٍ فكري موزع على ثلاث جولات مكثفة.",
+                schedule_r1_date: "الأحد 3 أغسطس 2025 (9:00 - 12:00)", schedule_r1_title: "الجولة الأولى", schedule_r1_desc: "أسئلة متعددة الخيارات لـ 142 مشاركًا. اختبار أولي للمعارف الأساسية.",
+                schedule_r2_date: "الثلاثاء 5 أغسطس 2025 (9:00 - 12:00)", schedule_r2_title: "الجولة الثانية", schedule_r2_desc: "سلسلة أخرى من الأسئلة متعددة الخيارات لـ 135 متنافسًا، مع زيادة في التعقيد.",
+                schedule_r3_date: "الخميس 7 أغسطس 2025 (9:00 - 12:00)", schedule_r3_title: "الجولة الثالثة", schedule_r3_desc: "الاختبار النهائي لأفضل 57 مشاركًا. كتابة براهين كاملة لإثبات الإتقان والدقة الرياضية.",
+                rules_title: "قواعد الامتحان", rules_subtitle: "النزاهة والإنصاف في صميم منافستنا.",
+                rules_reqs_title: "المتطلبات", rules_reqs_1: "يجب أن تكون الكاميرا ومشاركة الشاشة نشطة طوال الوقت.", rules_reqs_2: "يجب أن يكون الوجه واليدان ومساحة العمل واضحة للعيان.", rules_reqs_3: "بيئة هادئة ومضاءة جيدًا.", rules_reqs_4: "15 دقيقة لمسح الإجابات ضوئيًا وإرسالها بعد النهاية.",
+                rules_bans_title: "الممنوعات", rules_bans_1: "لا آلات حاسبة أو منقلة.", rules_bans_2: "لا برامج أو مواقع ويب أو موارد خارجية.", rules_bans_3: "لا كتب أو ملاحظات شخصية.", rules_bans_4: "لا تعاون. يجب أن يكون العمل فرديًا بنسبة 100٪.",
+                participants_title: "مشاركونا", participants_subtitle: "تهانينا لجميع التلاميذ الذين شاركوا في الاختبارات.",
+                participants_r1_r2: "المشاركون في الجولتين 1 و 2", participants_r3: "المشاركون في الجولة 3",
+                participants_r3_senior: "فئة الأكابر", participants_r3_junior: "فئة الأصاغر",
+                results_title: "المواضيع والحلول", results_subtitle: "استكشف المسائل التي شكلت تحديًا لمشاركينا.",
+                results_r1: "الجولة الأولى", results_r2: "الجولة الثانية", results_r3: "الجولة الثالثة",
+                results_subject_ar: "الموضوع (عربي)", results_subject_fr: "الموضوع (فرنسي)", results_solutions: "الحلول",
+                results_junior: "فئة الأصاغر", results_senior: "فئة الأكابر",
+                team_title: "الفريق المنظم", team_subtitle: "الأشخاص المتفانون الذين جعلوا هذا الحدث ممكنًا.",
+                team_lead: "القيادة والتنظيم", team_problems: "إعداد المسائل", team_proctors: "المراقبون", team_latex: "فريق LaTeX",
+                footer_title: "انضم إلى مجتمعنا", footer_copy: "© 2025 الأولمبياد الجزائري للرياضيات. جميع الحقوق محفوظة."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.getElementById('current-lang').textContent = lang.toUpperCase();
+            localStorage.setItem('amo_lang', lang);
+        }
+        
+        function populateList(selector, data) {
+            const container = document.querySelector(selector);
+            if (container) {
+                container.innerHTML = data.map(name => `<span>${name}</span>`).join('');
+            } else {
+                console.error(`Container not found for selector: ${selector}`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Populate lists with data
+            populateList('#participants-r1-r2-list', participantsR1R2);
+            populateList('#participants-r3-senior-list', participantsR3Senior);
+            populateList('#participants-r3-junior-list', participantsR3Junior);
+
+            // Set initial language from storage or default to French
+            const savedLang = localStorage.getItem('amo_lang') || 'fr';
+            setLanguage(savedLang);
+
+            // --- UI LOGIC ---
+            // Accordion functionality
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+            accordionToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i[data-lucide="chevron-down"]');
+                    
+                    // Close other open accordions
+                    document.querySelectorAll('.accordion-content').forEach(item => {
+                        if (item !== content && item.style.maxHeight) {
+                            item.style.maxHeight = null;
+                            const otherIcon = item.previousElementSibling.querySelector('i[data-lucide="chevron-down"]');
+                            if (otherIcon) {
+                                otherIcon.style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+
+                    // Toggle current accordion
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        if(icon) icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        if(icon) icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
+                       targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
