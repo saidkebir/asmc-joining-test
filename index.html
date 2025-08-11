@@ -169,6 +169,12 @@
         [lang="ar"] {
             font-family: 'Tajawal', sans-serif;
         }
+
+        /* Fix for Arabic titles */
+        [lang="ar"] .section-title {
+            line-height: 1.5;
+            padding-bottom: 0.3rem;
+        }
     </style>
 </head>
 
@@ -194,17 +200,29 @@
                 </nav>
                 
                 <div class="flex items-center space-x-3">
-                    <button id="lang-switcher" class="btn-secondary px-4 py-2 rounded-lg flex items-center space-x-2 text-sm font-medium transition-all duration-300">
-                        <i class="fas fa-language text-indigo-400"></i>
-                        <span data-translate="lang_button">العربية</span>
-                    </button>
-                    <a href="https://discord.gg/pxfe6VZ9du" target="_blank" rel="noopener noreferrer" class="btn-secondary px-4 py-2 rounded-lg flex items-center space-x-2 text-sm font-medium transition-all duration-300">
+                    <!-- Language dropdown menu -->
+                    <div class="relative">
+                        <button id="lang-dropdown-btn" class="btn-secondary px-3 py-2 rounded-lg flex items-center text-sm font-medium transition-all duration-300">
+                            <i class="fas fa-language text-indigo-400"></i>
+                        </button>
+                        <div id="lang-dropdown" class="absolute right-0 mt-1 hidden bg-slate-800 rounded-lg shadow-lg w-32 z-50 border border-slate-700">
+                            <a href="#" data-lang="fr" class="block px-4 py-2 text-gray-300 hover:bg-slate-700 rounded-t-lg">Français</a>
+                            <a href="#" data-lang="ar" class="block px-4 py-2 text-gray-300 hover:bg-slate-700 rounded-b-lg">العربية</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Discord button (icon only) -->
+                    <a href="https://discord.gg/pxfe6VZ9du" target="_blank" rel="noopener noreferrer" 
+                       class="btn-secondary px-3 py-2 rounded-lg flex items-center text-sm font-medium transition-all duration-300"
+                       aria-label="Discord">
                         <i class="fab fa-discord text-indigo-400"></i>
-                        <span data-translate="discord_button">Discord</span>
                     </a>
-                    <a href="mailto:kebir.said.khaled@gmail.com" class="btn-secondary px-4 py-2 rounded-lg flex items-center space-x-2 text-sm font-medium transition-all duration-300">
+                    
+                    <!-- Email button (icon only) -->
+                    <a href="mailto:kebir.said.khaled@gmail.com" 
+                       class="btn-secondary px-3 py-2 rounded-lg flex items-center text-sm font-medium transition-all duration-300"
+                       aria-label="Contact">
                         <i class="fas fa-envelope text-indigo-400"></i>
-                        <span data-translate="contact_button">Contact</span>
                     </a>
                 </div>
             </div>
@@ -216,7 +234,7 @@
         <div class="container mx-auto px-6 text-center relative z-10">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-5xl md:text-7xl font-black mb-6 section-title leading-tight" data-translate="hero_title">
-                    Olympiade Algérienne de Mathématiques
+                    Olympiades Algériennes des Mathématiques
                 </h2>
                 <div class="text-2xl md:text-3xl font-bold text-indigo-300 mb-8" data-translate="hero_subtitle">
                     Archive 2025
@@ -285,7 +303,7 @@
                     </p>
                     <p data-translate="context_p3">
                         La majorité des participants avaient déjà bénéficié du programme de formation de juin et 
-                        avaient participé à l'Olympiade Nationale de Mathématiques organisée au Lycée des Mathématiques 
+                        avaient participé à l'Olympiade Nationale des Mathématiques organisée au Lycée des Mathématiques 
                         de La Coupole au début de juillet 2025.
                     </p>
                 </div>
@@ -335,8 +353,7 @@
                             <div class="text-gray-400 mb-4" data-translate="timeline_round2_time">Mardi • 9h00 - 12h00</div>
                             <p class="text-gray-300 mb-4" data-translate="timeline_round2_desc">
                                 Nouvelle série de questions à choix multiples avec une complexité accrue. 
-                                <strong class="text-purple-400">135 participants</strong> ont relevé le défi 
-                                de cette deuxième étape de sélection.
+
                             </p>
                             <div class="flex items-center text-sm text-gray-400" data-translate="timeline_round2_info">
                                 <i class="fas fa-users mr-2"></i>
@@ -987,6 +1004,8 @@
                                 <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Wissal Mechri</div>
                                 <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Meghabber Mohammed Al Ghazali</div>
                                 <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Khaoula Ghouga</div>
+                                <div class="participant-card"><i class="fas fa-brain text-blue-400 mr-2"></i>Abdelillah Hamadi</div>
+
                             </div>
                         </div>
                     </div>
@@ -1177,7 +1196,7 @@
                 stats_evaluation_rounds: "Toures d'Évaluation",
                 stats_selected_final: "Sélectionnés à la fin",
                 context_title: "Contexte et Objectifs",
-                context_p1: "Dans le cadre de la préparation aux compétitions internationales de mathématiques, la Commission Nationale de l'Olympiade Algérienne de Mathématiques a organisé une série d'examens de sélection durant le mois d'août 2025.",
+                context_p1: "Dans le cadre de la préparation aux compétitions internationales de mathématiques, Nous avons organisé une série d'examens de sélection durant le mois d'août 2025.",
                 context_p2: "L'objectif était d'identifier et de sélectionner les talents mathématiques les plus prometteurs du pays pour participer au stage d'entraînement intensif de l'été 2025/2026, préparatoire aux olympiades internationales.",
                 context_p3: "La majorité des participants avaient déjà bénéficié du programme de formation de juin et avaient participé à l'Olympiade Nationale de Mathématiques organisée au Lycée des Mathématiques de La Coupole au début de juillet 2025.",
                 timeline_title: "Chronologie des Épreuves",
@@ -1190,7 +1209,7 @@
                 timeline_round2_title: "Deuxième Toure",
                 timeline_round2_date: "5 août 2025",
                 timeline_round2_time: "Mardi • 9h00 - 12h00",
-                timeline_round2_desc: "Nouvelle série de questions à choix multiples avec une complexité accrue. <strong class='text-purple-400'>135 participants</strong> ont relevé le défi de cette deuxième étape de sélection.",
+                timeline_round2_desc: "Nouvelle série de questions à choix multiples avec une complexité accrue.",
                 timeline_round2_info: "<i class='fas fa-users mr-2'></i>135 participants • Complexité élevée",
                 timeline_round3_title: "Troisième Toure - Finale",
                 timeline_round3_date: "7 août 2025",
@@ -1248,7 +1267,7 @@
                 footer_community_telegram: "Canal Telegram",
                 footer_developer_title: "Développeur",
                 footer_copyright: "&copy; 2025 Olympiade Algérienne de Mathématiques. Tous droits réservés.",
-                footer_developed_with: "Développé avec",
+                footer_developed_with: "Développé avec passion",
                 footer_for_community: "pour la communauté mathématique algérienne",
             },
             ar: {
@@ -1287,7 +1306,7 @@
                 timeline_round2_title: "الجولة الثانية",
                 timeline_round2_date: "5 أوت 2025",
                 timeline_round2_time: "الثلاثاء • 9:00 - 12:00",
-                timeline_round2_desc: "سلسلة جديدة من الأسئلة متعددة الخيارات مع زيادة في التعقيد. واجه <strong class='text-purple-400'>135 مشاركًا</strong> تحدي هذه المرحلة الثانية من التأهيل.",
+                timeline_round2_desc: "سلسلة جديدة من الأسئلة متعددة الخيارات مع زيادة في التعقيد. واجه ",
                 timeline_round2_info: "<i class='fas fa-users mr-2'></i>135 مشاركًا • تعقيد مرتفع",
                 timeline_round3_title: "الجولة الثالثة - النهائية",
                 timeline_round3_date: "7 أوت 2025",
@@ -1311,7 +1330,7 @@
                 participants_round12_title: "المشاركون في الجولتين 1 و 2",
                 participants_round12_subtitle: "142 مشاركًا في المجموع",
                 participants_round3_title: "المتأهلون للنهائي - الجولة 3",
-                participants_round3_subtitle: "57 مشاركً�� متأهلاً",
+                participants_round3_subtitle: "57 مشاركً متأهلاً",
                 participants_senior_title: "فئة الكبار - 34 مشاركًا",
                 participants_junior_title: "فئة الصغار - 23 مشاركًا",
                 resources_title: "المواضيع والتصحيحات",
@@ -1365,9 +1384,30 @@
             });
         }
 
-        document.getElementById('lang-switcher').addEventListener('click', () => {
-            const newLang = currentLang === 'fr' ? 'ar' : 'fr';
-            setLanguage(newLang);
+        // Language dropdown functionality
+        const langDropdownBtn = document.getElementById('lang-dropdown-btn');
+        const langDropdown = document.getElementById('lang-dropdown');
+        
+        langDropdownBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!langDropdown.contains(e.target) && !langDropdownBtn.contains(e.target)) {
+                langDropdown.classList.add('hidden');
+            }
+        });
+        
+        // Handle language selection
+        document.querySelectorAll('#lang-dropdown a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+                langDropdown.classList.add('hidden');
+            });
         });
 
         // Smooth scrolling for anchor links
